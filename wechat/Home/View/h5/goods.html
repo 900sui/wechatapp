@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="misapplication-tap-highlight" content="no"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <title>商品推荐</title>
+    <link href="./css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script src="./js/jquery-1.12.1.js" type="text/javascript"></script>
+    <script src="js/H5Plugin/goods.js" type="text/javascript"></script>
+    <script>
+        /*
+         if(window.plus){
+         plusReady();
+         }else{
+         document.addEventListener( "plusready",  onPlusReady, false );
+         }*/
+        //loadCity();
+
+        $(document).ready(function(){
+
+            $('.col').delegate("img","click",function(){
+                alert(this.name);
+                var commands = {
+                    "type": this.name,
+                    "target_id":this.id
+                }
+                alert(commands.type+commands.target_id);
+                //$.parseJSON(goods);
+                plus.plugintest.PluginTestFunction(commands, function (result) {
+                            alert(result);
+                        },
+                        function (result) {
+                            alert(result);
+                        });
+            });
+
+        });
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+<div class="x-panel-top">
+    <div class="x-titlebar">
+        <div class="x-titlebar-left">
+            <span class="h5 text-white">商品推荐</span>
+        </div>
+        <div class="x-titlebar-title"/>
+        <div class="x-titlebar-right reverse"/>
+    </div>
+</div>
+<div id="container">
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-6" >
+            <img id="1" name="goods" src="img/2.jpg" class="img-responsive"/>
+        </div>
+        <div class="col col-xs-6">
+            <img src="img/2.jpg" id="2" name="goods" class="img-responsive"/>
+        </div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-4">
+            <img id="goods_219" src="img/2.jpg" class="img-responsive"/>
+        </div>
+        <div class="col col-xs-4">
+            <img src="img/2.jpg" class="img-responsive"/>
+        </div>
+        <div class="col col-xs-4">
+            <img src="img/2.jpg" class="img-responsive"/>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
