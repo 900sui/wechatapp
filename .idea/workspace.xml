@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aeb24be-d9a2-4a25-a6c3-2280809e4289" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Common/Util/curl.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/CommandsController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/curl.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Commands/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/h5.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/.idea/workspace.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/css/bootstrap.css" afterPath="$PROJECT_DIR$/Public/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/Public/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/Public/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/Public/css/bootstrap.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/css/common.css" afterPath="$PROJECT_DIR$/Public/css/common.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/goods.html" afterPath="$PROJECT_DIR$/wechat/Home/View/Commands/bus.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/img/2.jpg" afterPath="$PROJECT_DIR$/Public/img/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/H5Plugin/goods.js" afterPath="$PROJECT_DIR$/Public/js/H5Plugin/bus.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/bootstrap.js" afterPath="$PROJECT_DIR$/Public/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/Public/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/jquery-1.12.1.js" afterPath="$PROJECT_DIR$/Public/js/jquery-1.12.1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/npm.js" afterPath="$PROJECT_DIR$/Public/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechat/Home/View/h5/js/test.js" afterPath="$PROJECT_DIR$/Public/js/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/View/index.html" afterPath="$PROJECT_DIR$/wechat/Home/View/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Runtime/Logs/16_02_25.log" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_02_25.log" />
     </list>
     <ignored path="wechatapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -561,7 +536,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456380144694</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="html5 for app">
+      <created>1456390386540</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1456390386540</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -602,6 +583,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="html5 for app" />
     <option name="LAST_COMMIT_MESSAGE" value="html5 for app" />
   </component>
