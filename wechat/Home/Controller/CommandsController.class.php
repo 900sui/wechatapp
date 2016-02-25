@@ -44,7 +44,6 @@ class CommandsController extends Controller
             echo $result->errorMsg;
         }
 
-
     }
 }
 
