@@ -1,4 +1,8 @@
-body{font-family: 微软雅黑;}
+body{
+    font-family: 微软雅黑;
+
+}
+.row {margin:0}
 .x-titlebar{ background-color:#fff;}
 .x-cards{ background-color:#fff;}
 

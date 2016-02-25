@@ -8,7 +8,7 @@ function plusReady(){
 		B = window.plus.bridge;
 	var plugintest =
 	{
-		PluginGoodsFunction : function (Argus1,  successCallback, errorCallback )
+		PluginCommandsFunction : function (Argus1,  successCallback, errorCallback )
 		{
 			var success = typeof successCallback !== 'function' ? null : function(args)
 				{
@@ -20,7 +20,7 @@ function plusReady(){
 				};
 			callbackID = B.callbackId(success, fail);
 
-			return B.exec(_BARCODE, "PluginGoodsFunction", [callbackID, Argus1]);
+			return B.exec(_BARCODE, "PluginCommandsFunction", [callbackID, Argus1]);
 		},
 		PluginGetCityIdFunction : function (Argus1,  successCallback, errorCallback )
 		{
