@@ -18,18 +18,20 @@
          }*/
         //loadCity();
 
-        $(document).ready(function(){
-
-            $('.col').delegate("img","click",function(){
+        $(document).ready(function () {
+            $('.x-panel-top').delegate(".x-titlebar", "click", function () {
+                alert(123);
+            });
+            $('.col').delegate("img", "click", function () {
                 //alert(this.name.split('_')[0]);
                 //alert(this.name.split('_')[1]);
                 var commands = {
                     "type": this.name.split('_')[0],
-                    "target_id":this.name.split('_')[1]
+                    "target_id": this.name.split('_')[1]
                 }
 
                 //$.parseJSON(goods);
-                plus.pluginkangcun.PluginCommandsFunction(commands, function (result) {
+                plus.pluginkangcun.PluginCommandsFunction(bus, function (result) {
                             alert(result);
                         },
                         function (result) {
@@ -40,26 +42,24 @@
         });
 
 
-
-
-
     </script>
 </head>
 <body>
 
 
 <div class="x-panel-top">
-    <div class="x-titlebar">
-        <div class="x-titlebar-left">
-            <span class="h5 text-white">商品推荐</span>
+        <div class="x-titlebar">
+            <div class="x-titlebar-left">
+                <span class="h5 text-white">服务推荐</span>
+                <span class="h5 text-right"></span>
+            </div>
+            <div class="x-titlebar-right reverse"></div>
         </div>
-        <div class="x-titlebar-title"/>
-        <div class="x-titlebar-right reverse"/>
-    </div>
 </div>
-<div id="container">
+<div id="container" class="x-cards">
     {$container}
 </div>
+
 
 
 </body>
