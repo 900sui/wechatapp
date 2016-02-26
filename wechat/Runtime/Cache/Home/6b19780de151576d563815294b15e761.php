@@ -3,7 +3,7 @@
 	<head>
 		<title></title>
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-		<script type="text/javascript" src="/wechatapp/Public/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/wechat/Public/js/jquery-1.4.2.min.js"></script>
 	</head>
 	<body>
 	</body>
