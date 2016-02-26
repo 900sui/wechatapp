@@ -8,7 +8,8 @@
     <link href="__PUBLIC__/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="__PUBLIC__/css/common.css" media="screen" rel="stylesheet" type="text/css"/>
     <script src="__PUBLIC__/js/jquery-1.12.1.js" type="text/javascript"></script>
-    <script src="__PUBLIC__/js/H5Plugin/bus.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/os.js" type="text/javascript"></script>
+
     <script>
         /*
          if(window.plus){
@@ -18,48 +19,90 @@
          }*/
         //loadCity();
 
-        $(document).ready(function () {
-            $('.x-panel-top').delegate(".x-titlebar", "click", function () {
-                alert(123);
-            });
-            $('.col').delegate("img", "click", function () {
-                //alert(this.name.split('_')[0]);
-                //alert(this.name.split('_')[1]);
-                var commands = {
+        setupWebViewJavascriptBridge(function (bridge) {
+            bridge.registerHandler('testJavascriptHandler', function (data, responseCallback) {
+                //log('ObjC called testJavascriptHandler with', data)
+                alert(data);
+                var commends = {
                     "type": this.name.split('_')[0],
                     "target_id": this.name.split('_')[1]
-                }
-
-                //$.parseJSON(goods);
-                plus.pluginkangcun.PluginCommandsFunction(bus, function (result) {
-                            alert(result);
-                        },
-                        function (result) {
-                            alert(result);
-                        });
+                };
+                //log('JS responding with', responseData)
+                responseCallback(commends);
             });
-
         });
+
+        $(document).ready(function () {
+
+            if (browser.versions.ios) {
+                alert("ios");
+
+                setupWebViewJavascriptBridge(function (bridge) {
+                    $('.col').delegate("img", "click", function () {
+                        //alert(this.name.split('_')[0]);
+                        //alert(this.name.split('_')[1]);
+                        var commends = {
+                            "type": this.name.split('_')[0],
+                            "target_id": this.name.split('_')[1]
+                        };
+                        //$.parseJSON(goods);
+                        bridge.callHandler('testObjcCallback', commends, function (response) {
+                            //log('JS got response', response)
+                            alert(response);
+                        });
+                    });
+
+                });
+
+            } else {
+                alert("android");
+                $('.col').delegate("img", "click", function () {
+
+                    var commends = {
+                        "type": this.name.split('_')[0],
+                        "target_id": this.name.split('_')[1]
+                    };
+                    //$.parseJSON(goods);
+                    var str = JSON.stringify(commends);
+                    window.AndroidWebView.testObjcCallback(str);
+                });
+            }
+        });
+
+        function setupWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                return callback(WebViewJavascriptBridge);
+            }
+            if (window.WVJBCallbacks) {
+                return window.WVJBCallbacks.push(callback);
+            }
+            window.WVJBCallbacks = [callback];
+            var WVJBIframe = document.createElement('iframe');
+            WVJBIframe.style.display = 'none';
+            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+            document.documentElement.appendChild(WVJBIframe);
+            setTimeout(function () {
+                document.documentElement.removeChild(WVJBIframe)
+            }, 0)
+        }
 
 
     </script>
 </head>
 <body>
 
-
 <div class="x-panel-top">
-        <div class="x-titlebar">
-            <div class="x-titlebar-left">
-                <span class="h5 text-white">服务推荐</span>
-                <span class="h5 text-right"></span>
-            </div>
-            <div class="x-titlebar-right reverse"></div>
+    <div class="x-titlebar">
+        <div class="x-titlebar-left">
+            <span class="h5 text-white">服务推荐</span>
+            <span class="h5 text-right"></span>
         </div>
+        <div class="x-titlebar-right reverse"></div>
+    </div>
 </div>
 <div id="container" class="x-cards">
     {$container}
 </div>
-
 
 
 </body>

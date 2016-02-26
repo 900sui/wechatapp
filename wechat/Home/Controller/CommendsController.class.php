@@ -69,6 +69,7 @@ class CommendsController extends Controller
         $response = $ch->http($uUrl, $data);
         $u_result = json_decode($response);
         $u = $u_result->data;
+        //dump($u);
         $u_container = "<div class=\"row x-row x-menu2\" >";
         if ($u_result->error == 0) {
             for ($i = 0; $i < count($u); $i++) {
@@ -79,7 +80,7 @@ class CommendsController extends Controller
                     . " class=\"img-responsive\"/></div>";
                 //dump(($i + 1) % 3 == 0);
                 if (($i + 1) % 3 == 0 && ($i + 1) < count($u)) {
-                    $u_container .= "</div><div  class=\"row x-row x-menu2\" >";
+                    $u_container .= "</div><div class=\"row x-row x-menu2\" >";
                 }
             }
             $u_container .= "</div>";

@@ -9,9 +9,6 @@ body{
 .text-white{ color:#333333;}
 .text-right{float:right;line-height: 50px;overflow: hidden;margin-right: 2em;}
 
-
-.x-img1{ width:40px; height:28px;}
-
 .x-titlebar-left{padding-left: 2em;line-height: 50px;overflow: hidden;}
 
 .x-menu.x-row{ margin-bottom:5px;}
@@ -26,7 +23,7 @@ body{
 
 .x-menu2{ height:100px;padding-bottom: 2px;}
 .x-menu2 .col{ height:99px; padding-right:1px;padding-left: 1px; overflow:hidden;}
-.x-menu2 .col .img-responsive{ width:100%; height:100px;}
+.x-menu2 .col .img-responsive{ width:100%;height:100% }
 
 
 .x-menu3{ height:100px;}
