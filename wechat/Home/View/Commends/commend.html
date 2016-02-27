@@ -35,7 +35,6 @@
             });
             */
             if (browser.versions.ios) {
-
                 setupWebViewJavascriptBridge(function (bridge) {
                     $('.col').delegate("img", "click", function () {
                         //alert(this.name.split('_')[0]);
@@ -50,11 +49,9 @@
                         });
                     });
                 });
-
             } else {
                 alert("android");
                 $('.col').delegate("img", "click", function () {
-
                     var commends = {
                         "type": this.name.split('_')[0],
                         "target_id": this.name.split('_')[1]
@@ -64,7 +61,6 @@
                     window.AndroidWebView.callCommends(str);
                 });
             }
-
         });
 
 
