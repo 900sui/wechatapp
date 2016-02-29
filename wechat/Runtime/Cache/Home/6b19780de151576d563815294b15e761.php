@@ -27,13 +27,13 @@
 				         	longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
 				        	var speed = res.speed; // 速度，以米/每秒计
 				        	var accuracy = res.accuracy; // 位置精度
-				        	$.post('<?php echo U('jm');?>',{'latitude':latitude,'longitude':longitude},function(rt){ 
-				        		var description = ""; 
-					 	for(var i in rt){   
-						        	var property=rt[i];   
-						        	description+=i+" = "+property+"\n";  
-					    	}   
-					    alert(description); 
+				        	$.post("<?php echo U('jm');?>",{'latitude':latitude,'longitude':longitude},function(rt){
+				        		var description = "";
+								for(var i in rt){
+						        	var property=rt[i];
+						        	description+=i+" = "+property+"\n";
+					    		}
+					    	alert(description);
 				        },"json")
 				    }
 				        
