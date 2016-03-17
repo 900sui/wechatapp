@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.2.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+    <title></title>
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css"/>
+
+
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iscroll/jquery.mobile-1.3.2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iscroll/list.css"/>
+    <script src="__PUBLIC__/js/iscroll/jquery-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/js/iscroll/jquery.mobile-1.3.2.min.js"></script>
+    <script src="__PUBLIC__/js/iscroll/iscroll.js"></script>
+    <script src="__PUBLIC__/js/iscroll/list.js"></script>
+    <style>
+        .content {
+            height: 100%
+        }
+
+        body {
+            background-color: #E8E8E8;
+            height: 100%
+        }
+
+        .xian {
+            margin: 5px 0px;
+        }
+
+        .con_list {
+            background-color: #fff;
+            padding: 10px 5px 4px 20px;
+            margin-top: 1px;
+            text-indent: 0em;
+        }
+
+        .li_left {
+            float: left;
+            font-size: 15px;
+        }
+
+        .li_right {
+            float: right;
+            font-size: 12px;
+            color: #848484
+        }
+
+        .pingfeng {
+            padding: 6px 0px 0px 0px;
+        }
+
+        .r {
+            padding-right: 7px;
+        }
+
+        .detail {
+            padding: 10px 0px;
+        }
+
+        .imgbox {
+            width: 32%;
+            float: left;
+        }
+
+        .imgbox img {
+            width: 100%
+        }
+
+        .price {
+            padding-left: 10px;
+            float: left;
+        }
+
+        .p {
+            font-size: 18px;
+            color: #48902B;
+        }
+
+        .sp {
+            font-size: 12px;
+            color: #848484
+        }
+
+        .more {
+            text-align: center;
+            font-size: 15px;
+            color: #848484;
+            padding: 5px 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <span class="left glyphicon glyphicon-menu-left"></span>
+    <span class="text-algin">综合卡</span>
+    <span class="right glyphicon glyphicon-search"></span>
+</div>
+<!--<div class="nav" style="">
+    &lt;!&ndash;导航条&ndash;&gt;
+    <ul class="nav-main">
+        <li id="li-1">区域<span></span>
+            <div id="box-1" class="hidden-box hidden-loc-index">
+                <ul>
+                    <li><a href="">杨浦</a></li>
+                    <li><a href="">徐汇</a></li>
+                    <li><a href="">虹桥</a></li>
+                    <li><a href="">浦东</a></li>
+                    <li><a href="">普陀</a></li>
+                    <li><a href="">闸北</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-2">分类<span></span>
+            <div id="box-2" class="hidden-box hidden-loc-us">
+                <ul>
+                    <li><a href="">美容</a></li>
+                    <li><a href="">美发</a></li>
+                    <li><a href="">美甲</a></li>
+                    <li><a href="">推拿</a></li>
+                    <li><a href="">汗蒸</a></li>
+                    <li><a href="">养生</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-3">智能排序<span></span>
+            <div id="box-3" class="hidden-box hidden-loc-info">
+                <ul>
+                    <li><a href="">默认</a></li>
+                    <li><a href="">最热</a></li>
+                    <li><a href="">最近</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-4">筛选<span></span>
+            <div id="box-4" class="hidden-box hidden-loc-info box04">
+                <ul>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    &lt;!&ndash;隐藏盒子  <div class="clear"></div> &ndash;&gt;
+</div>-->
+
+
+<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+<div class="content" id="content_list">
+
+    <!-- 		<div class="con_list">
+                            <div>
+                                <div class='li_left'>上海尽快根据赵兴有限公司</div>
+                                <div class='li_right r'>888m</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class='pingfeng'>☆☆☆☆<span> 0.0分</span></div>
+                            <div class='li_right'>国定路12号</div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="con_list">
+                            <div>
+                                <div class='li_left'>上海尽快根据赵兴有限公司</div>
+                                <div class='li_right r'>888m</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class='pingfeng'>☆☆☆☆<span> 0.0分</span></div>
+                            <div class='li_right '>国定路12号</div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="con_list">
+                            <div>
+                                <div class='li_left'>上海尽快根据赵兴有限公司</div>
+                                <div class='li_right r'>888m</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class='pingfeng'>☆☆☆☆<span> 0.0分</span></div>
+                            <div class='li_right '>国定路12号</div>
+                            <div class="clear"></div>
+                            <hr class='xian'>
+                            <div class='detail'>
+                                <div class='imgbox'><img src="__PUBLIC__/img/images/pro.jpg" alt="" ></div>
+                                <div class='price'>
+                                    <div>君丝佳vip卡</div>
+                                    <div ><span class='p'>￥700.00</span> <span class='sp'><s>￥1000.00</s></span> </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class='detail'>
+                                <div class='imgbox'><img src="__PUBLIC__/img/images/pro.jpg" alt="" ></div>
+                                <div class='price'>
+                                    <div>君丝佳vip卡</div>
+                                    <div ><span class='p'>￥700.00</span> <span class='sp'><s>￥1000.00</s></span> </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                            <hr class='xian'>
+                            <div class='more'>更多服务</div>
+                        </div>	 -->
+
+    <div class="con_list">
+        <a href="{:U('Card_details')}?cid={$vo['card_id']}">
+            <div class='detail'>
+                <div class='imgbox'><img src="{$vo['goodsImg']}" alt=""></div>
+                <div class='price'>
+                    <div>{$vo['shop_name']}</div>
+                    <div>{$vo['name']}</div>
+                    <div><span class='p'>￥{$vo['favourable']}</span> <span class='sp'><s>￥{$vo['cost']}</s></span></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </a>
+    </div>
+
+
+</div>
+<div class="clear"></div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wxc05bf626f605c34a', // 必填，公众号的唯一标识
+            timestamp: '{$timestamp}', // 必填，生成签名的时间戳
+            nonceStr: '{$noncestr}', // 必填，生成签名的随机串
+            signature: '{$signature}',// 必填，签名，见附录1
+            jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        var latitude = '';
+        var longitude = '';
+        wx.ready(function () {
+            wx.getLocation({
+                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (res) {
+                    latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                    longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                    var speed = res.speed; // 速度，以米/每秒计
+                    var accuracy = res.accuracy; // 位置精度
+                    $.post('{:U('
+                    jm
+                    ')}', {'latitude': latitude, 'longitude': longitude}, function (rt) {
+                        var description = "";
+                        for (var i in rt) {
+                            var property = rt[i];
+                            description += i + " = " + property + "\n";
+                        }
+                        alert(description);
+                    }, "json"
+                    )
+                }
+
+            });
+        });
+
+    });
+
+
+</script>
+</html>

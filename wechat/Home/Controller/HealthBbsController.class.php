@@ -9,32 +9,38 @@
 namespace Home\Controller;
 
 use Think\Controller;
-use Common\Util\curl;
+use Common\Util;
+
+
 class HealthBbsController extends Controller
 {
-    public function detail(){
+    public function detail()
+    {
+        $t = new Util\token();
+        $token = $t->set_token($_GET);
+        $post_id = I('get.post_id');
 
-        $post_id=I('get.post_id');
-        $url = "http://jkd2.shutung.com:81/App/v3/HealthBbs/postDetail";
-        $data['post_id']=$post_id;
-        $ch = new curl();
-        $result = $ch->http($url,$data);
+        $url = BASE_URL."HealthBbs/postDetail";
+        $data['post_id'] = $post_id;
+        $data['token'] = $token;
+
+        $ch = new Util\curl();
+        $result = $ch->http($url, $data);
         $result = json_decode($result);
-        //dump($result);
-        if($result->error == 0){
+
+        if ($result->error == 0) {
             $comment = $result->data;
-           //dump($comment);
-            $this->assign('icon',$comment->poster_icon);
-            $this->assign('title',$comment->title);
-            $this->assign('poster',$comment->poster);
-            $this->assign('create_time',$comment->create_time);
-            //dump($comment->content);
-            $this->assign('list',$comment->content);
-            //$this->assign('comment',$comment);
+
+            $this->assign('icon', $comment->poster_icon);
+            $this->assign('title', $comment->title);
+            $this->assign('poster', $comment->poster);
+            $this->assign('create_time', $comment->create_time);
+            $this->assign('list', $comment->content);
+
             $this->display();
-        }else{
+        } else {
             echo "<script>alert('$result->errorMsg');</script>";
         }
-
     }
+
 }

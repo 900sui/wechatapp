@@ -30,15 +30,16 @@ class curl
                 $opts[CURLOPT_POSTFIELDS] = $params;
                 break;
             default:
-                throw new Exception('不支持的请求方式！');
+                throw new \Think\Exception('不支持的请求方式！');
         }
+       // dump($opts);
         /* 初始化并执行curl请求 */
         $ch = curl_init();
         curl_setopt_array($ch, $opts);
         $data  = curl_exec($ch);
         $error = curl_error($ch);
         curl_close($ch);
-        if($error) throw new Exception('请求发生错误：' . $error);
+        if($error) throw new \Think\Exception('请求发生错误：' . $error);
         return  $data;
     }
 }

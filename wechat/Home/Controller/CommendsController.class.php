@@ -9,7 +9,7 @@
 namespace Home\Controller;
 
 use Think\Controller;
-use Common\Util\curl;
+use Common\Util;
 
 class CommendsController extends Controller
 {
@@ -17,7 +17,7 @@ class CommendsController extends Controller
     {
         $this->display();
     }
-
+/*
     public function bus()
     {
         $cid = $_GET["cid"];
@@ -53,17 +53,20 @@ class CommendsController extends Controller
             echo $result->errorMsg;
         }
     }
-
+*/
     public function commend()
     {
         $cid = $_GET["cid"];
+        $t = new Util\token();
+        $token = $t->set_token($_GET);
         //dump($cid);
         $busUrl = "http://jkd2.shutung.com:81/App/v3/Ad/commendBus";
         $goodsUrl="http://jkd2.shutung.com:81/App/v3/Ad/commendGoods";
         $safeUrl = "http://jkd2.shutung.com:81/App/v3/Ad/commendSafe";
         $uUrl = "http://jkd2.shutung.com:81/App/v3/Ad/commendU";
         $data["cid"] = $cid;
-        $ch = new curl();
+        $data['token'] = $token;
+        $ch = new Util\curl();
 
         //推荐服务
         $response = $ch->http($uUrl, $data);

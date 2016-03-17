@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+	<title>商家详情</title>
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+	<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="__PUBLIC__/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	<script src="__PUBLIC__/js/bootstrap.js"></script>
+	
+	<!-- <script src="js/moblie/jquery.mobile-1.4.5.js"></script> -->
+	<link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="__PUBLIC__/css/main.css" />
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<style>
+		.pf span{color:#96212E;}
+		.yingying{position:absolute; bottom: 0;font-size: 16px; color: #999C94;background-color: rgba(165, 165, 165, 0.29); width: 100%}
+		.title{color:#D7D9D4; padding: 6px 16px;font-size: 17px;}
+		.intro{color:#8F9090;font-weight: 100 ;}
+		.biaoti{margin-top: 2%;margin-left: 10px;font-size: 15px;margin-bottom: -2%;}
+		.conts{padding: 8px 14px 5px 10px;}
+		.detail_link{ padding: 14px 40px 43px;}
+		.jieshao{font-size: 13px;color: rgb(111, 111, 111);}
+	</style>
+</head>
+<body>
+	<div class="detail_header">
+		<div class="header_img" style='height: 160px;'>
+			<img src="{$res.card_name}">
+			<div class='yingying'>
+				<div class='title'></div>
+			</div>
+		</div>
+		<div class="detail_title con_title intro" >
+			<ul>
+				<li>
+					<span class="lv">￥{$res.real_price}</span>
+					<span ><s>￥{$res.price}</s> 已售{$res.sales}</span>
+				</li>
+				<li>
+					<span >特别提示： 购买本综合卡，可免费获得预付卡保险</span>
+					
+				</li>
+				<li>
+					<span >{$res.service_period}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='biaoti'>客户信息</div>
+	<div class="detail_link_box">
+		
+			<div class='conts'>{$res.user_bus.shop_name}</div>
+			<div class='conts'><div style='float:right'><a href="tel:{$res.user_bus.phone}"><img src="__PUBLIC__/img/images/tel.png" width='25px'></a></div><div>电话：{$res.user_bus.phone}</div></div>
+			<div class='conts'>地址：{$res.user_bus.uaddress}</div>
+		
+	</div>
+	<div class='biaoti'>详情介绍</div>
+	<div class="detail_link_box">
+	<div class="detail_link">
+		<div>1、此卡充值金额600元，实际卡内金额为1000元。</div>
+		<div style='padding:10px 0px'>2、只限本店使用，可用于本店所用服务项目。</div>
+		<div>3、此卡拥有单用途商业预付卡履约保证保险。</div>
+	</div>
+	</div>
+
+	<div class='biaoti'>购买须知</div>
+		<div class="detail_link_box jieshao">
+			
+				<div class='conts'>1、本综合卡必须通过换购门店的服务项目或套餐项目后实现消费、体验</div>
+				<div class='conts'>2、本综合卡使用中必须注意所换购服务项目的适用人群；</div>
+				<div class='conts'>3、本综合卡使用中必须注意所换购服务项目到店体验需提前预约的时间。</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zheka</title>
+    <meta charset="utf-8">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="__PUBLIC__/js/iscroll/jquery-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <link href="__PUBLIC__/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css"/>
+
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iscroll/jquery.mobile-1.3.2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iscroll/list.css"/>
+
+    <script src="__PUBLIC__/js/iscroll/jquery.mobile-1.3.2.min.js"></script>
+    <script src="__PUBLIC__/js/iscroll/iscroll.js"></script>
+    <!-- <script src="__PUBLIC__/iscroll/js/list.js"></script> -->
+
+
+    <style>
+        .content {
+            height: 100%
+        }
+
+        #wrapper {
+            background-color: #E6E6E6;
+            top: 73px;
+            margin-bottom: -45px;
+        }
+
+        .xian {
+            margin: 5px 0px;
+        }
+
+        .con_list {
+            background-color: #fff;
+            padding: 10px 5px 4px 20px;
+            margin-top: 1px;
+            text-indent: 0em;
+        }
+
+        .li_left {
+            float: left;
+            font-size: 15px;
+        }
+
+        .li_right {
+            float: right;
+            font-size: 12px;
+            color: #848484
+        }
+
+        .pingfeng {
+            padding: 6px 0px 0px 0px;
+        }
+
+        .r {
+            padding-right: 7px;
+        }
+
+        .detail {
+            padding: 10px 0px;
+        }
+
+        .imgbox {
+            width: 32%;
+            float: left;
+        }
+
+        .imgbox img {
+            width: 100%
+        }
+
+        .price {
+            padding-left: 10px;
+            float: left;
+        }
+
+        .p {
+            font-size: 18px;
+            color: #48902B;
+        }
+
+        .sp {
+            font-size: 12px;
+            color: #848484
+        }
+
+        .more {
+            text-align: center;
+            font-size: 15px;
+            color: #848484;
+            padding: 5px 0px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 35px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="header">
+    商家
+</div>
+
+<div class="nav" style="display: block;">
+    <!--导航条-->
+    <!--<ul class="nav-main">
+        <li id="li-1">区域<span></span>
+            <div id="box-1" class="hidden-box hidden-loc-index">
+                <ul>
+                    <li><a href="">杨浦</a></li>
+                    <li><a href="">徐汇</a></li>
+                    <li><a href="">虹桥</a></li>
+                    <li><a href="">浦东</a></li>
+                    <li><a href="">普陀</a></li>
+                    <li><a href="">闸北</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-2">分类<span></span>
+            <div id="box-2" class="hidden-box hidden-loc-us">
+                <ul>
+                    <li><a href="">美容</a></li>
+                    <li><a href="">美发</a></li>
+                    <li><a href="">美甲</a></li>
+                    <li><a href="">推拿</a></li>
+                    <li><a href="">汗蒸</a></li>
+                    <li><a href="">养生</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-3">智能排序<span></span>
+            <div id="box-3" class="hidden-box hidden-loc-info">
+                <ul>
+                    <li><a href="">默认</a></li>
+                    <li><a href="">最热</a></li>
+                    <li><a href="">最近</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="li-4">筛选<span></span>
+            <div id="box-4" class="hidden-box hidden-loc-info box04">
+                <ul>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                    <li><a href="">筛选</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>-->
+    <!--隐藏盒子-->
+</div>
+<div id="wrapper">
+    <div id="scroller">
+        <div id="pullDown" class="idle">
+            <span class="pullDownIcon"></span>
+            <span class="pullDownLabel">刷新。。。</span>
+        </div>
+
+        <div id="thelist">
+        </div>
+        <div id="pullUp" class="idle">
+            <span class="pullUpIcon"></span>
+            <span class="pullUpLabel">加载。。。</span>
+        </div>
+    </div>
+</div>
+
+<!-- 	<div id="footer"></div> -->
+</body>
+<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wx1c7041549642a8d9', // 必填，公众号的唯一标识
+            timestamp: '{$timestamp}', // 必填，生成签名的时间戳
+            nonceStr: '{$noncestr}', // 必填，生成签名的随机串
+            signature: '{$signature}',// 必填，签名，见附录1
+            jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+
+        wx.ready(function () {
+            var latitude = '';
+            var longitude = '';
+            wx.getLocation({
+                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (res) {
+                    latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                    longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+
+                    var speed = res.speed; // 速度，以米/每秒计
+                    var accuracy = res.accuracy; // 位置精度
+                    loaded(latitude, longitude);
+                }
+            });
+
+        });
+
+
+    });
+
+
+    var OFFSET = 5;
+    var page = 1;
+    var PAGESIZE = 10;
+
+    var myScroll,
+            pullDownEl, pullDownOffset,
+            pullUpEl, pullUpOffset,
+            generatedCount = 0;
+    var maxScrollY = 0;
+
+    var hasMoreData = false;
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    }, false);
+
+
+    function loaded(lat, lon) {
+
+        pullDownEl = document.getElementById('pullDown');
+        pullDownOffset = pullDownEl.offsetHeight;
+        pullUpEl = document.getElementById('pullUp');
+        pullUpOffset = pullUpEl.offsetHeight;
+
+        hasMoreData = false;
+        // $("#thelist").hide();
+        $("#pullUp").hide();
+
+        pullDownEl.className = 'loading';
+        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
+
+        page = 1;
+
+        $.post(
+                "{:U('ZhCard/datalist')}", {
+                    "page": page,
+                    "pagesize": PAGESIZE,
+                    "lat": lat,
+                    "lon": lon
+                },
+                function (response, status) {
+
+                    //alert(response);
+                    var rep = eval("(" + response + ")");
+                    //alert(rep.total);
+
+                    if (status == "success") {
+                        $("#thelist").show();
+
+                        if (rep.total < PAGESIZE) {
+                            hasMoreData = false;
+                            $("#pullUp").hide();
+                        } else {
+                            hasMoreData = true;
+                            $("#pullUp").show();
+                        }
+
+                        // document.getElementById('wrapper').style.left = '0';
+
+                        myScroll = new iScroll('wrapper', {
+                            useTransition: true,
+                            topOffset: pullDownOffset,
+                            onRefresh: function () {
+                                if (pullDownEl.className.match('loading')) {
+                                    pullDownEl.className = 'idle';
+                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                    this.minScrollY = -pullDownOffset;
+                                }
+                                if (pullUpEl.className.match('loading')) {
+                                    pullUpEl.className = 'idle';
+                                    pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+                                }
+                            },
+                            onScrollMove: function () {
+                                if (this.y > OFFSET && !pullDownEl.className.match('flip')) {
+                                    pullDownEl.className = 'flip';
+                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = '刷新...';
+                                    this.minScrollY = 0;
+                                } else if (this.y < OFFSET && pullDownEl.className.match('flip')) {
+                                    pullDownEl.className = 'idle';
+                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                    this.minScrollY = -pullDownOffset;
+                                }
+                                if (this.y < (maxScrollY - pullUpOffset - OFFSET) && !pullUpEl.className.match('flip')) {
+                                    if (hasMoreData) {
+                                        this.maxScrollY = this.maxScrollY - pullUpOffset;
+                                        pullUpEl.className = 'flip';
+                                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+                                    }
+                                } else if (this.y > (maxScrollY - pullUpOffset - OFFSET) && pullUpEl.className.match('flip')) {
+                                    if (hasMoreData) {
+                                        this.maxScrollY = maxScrollY;
+                                        pullUpEl.className = 'idle';
+                                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+                                    }
+                                }
+                            },
+                            onScrollEnd: function () {
+                                if (pullDownEl.className.match('flip')) {
+                                    pullDownEl.className = 'loading';
+                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                                    // pullDownAction(); // Execute custom function (ajax call?)
+                                    refresh();
+                                }
+                                if (hasMoreData && pullUpEl.className.match('flip')) {
+                                    pullUpEl.className = 'loading';
+                                    pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                                    // pullUpAction(); // Execute custom function (ajax call?)
+                                    nextPage();
+                                }
+                            }
+                        });
+
+                        $("#thelist").empty();
+                        $.each(rep.data, function (key, value) {
+
+                            $("#thelist").append('<div class="con_list"><a href="{:U("Card_details")}?cid=' + value.card_id + '"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="price"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+
+                        });
+                        // $("#thelist").listview("refresh");
+                        myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+                        // pullDownEl.className = 'idle';
+                        // pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
+                        // this.minScrollY = -pullDownOffset;
+
+                        if (hasMoreData) {
+                            myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                        } else {
+                            myScroll.maxScrollY = myScroll.maxScrollY;
+                        }
+                        maxScrollY = myScroll.maxScrollY;
+                    }
+                    ;
+                },
+                "json");
+    }
+
+    function refresh() {
+        page = 1;
+        $.post(
+                "{:U('ZhCard/datalist')}", {
+                    "page": page,
+                    "pagesize": PAGESIZE
+                },
+                function (response, status) {
+                    var rep = eval("(" + response + ")");
+                    if (status == "success") {
+                        $("#thelist").empty();
+
+                        myScroll.refresh();
+
+                        if (rep.total < PAGESIZE) {
+                            hasMoreData = false;
+                            $("#pullUp").hide();
+                        } else {
+                            hasMoreData = true;
+                            $("#pullUp").show();
+                        }
+
+                        $.each(rep.data, function (key, value) {
+                            $("#thelist").append('<div class="con_list"><a href="{:U("Card_details")}?cid=' + value.card_id + '"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="price"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                        });
+                        // $("#thelist").listview("refresh");
+                        myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+
+                        if (hasMoreData) {
+                            myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                        } else {
+                            myScroll.maxScrollY = myScroll.maxScrollY;
+                        }
+                        maxScrollY = myScroll.maxScrollY;
+                    }
+                    ;
+                },
+                "json");
+    }
+
+    function nextPage() {
+        page++;
+        $.post(
+                "{:U('ZhCard/datalist')}", {
+                    "page": page,
+                    "pagesize": PAGESIZE
+                },
+                function (response, status) {
+                    var rep = eval("(" + response + ")");
+                    if (status == "success") {
+                        if (rep.total < PAGESIZE) {
+                            hasMoreData = false;
+                            $("#pullUp").hide();
+                        } else {
+                            hasMoreData = true;
+                            $("#pullUp").show();
+                        }
+
+                        $.each(rep.data, function (key, value) {
+                            $("#thelist").append('<div class="con_list"><a href="{:U("Card_details")}?cid=' + value.card_id + '"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="price"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                        });
+                        // $("#thelist").listview("refresh");
+                        myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+                        if (hasMoreData) {
+                            myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                        } else {
+                            myScroll.maxScrollY = myScroll.maxScrollY;
+                        }
+                        maxScrollY = myScroll.maxScrollY;
+                    }
+                    ;
+                },
+                "json");
+    }
+
+
+</script>
+
+
+</html>

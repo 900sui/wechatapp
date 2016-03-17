@@ -1,10 +1,10 @@
-body{font-family: 微软雅黑;}
-.x-titlebar{padding:0.675rem;background-color:#fff;overflow:hidden;}
-.x-titlebar-left{float:left;border-left:4px solid #71d47c;height:1.45rem;line-height:1.45rem;}
-.x-titlebar-left span{padding-left:0.675rem;}
-
+body{font-family: 微软雅黑;font-size:15px;}
+.x-titlebar{padding:0.5rem;background-color:#fff;overflow:hidden;}
+.x-titlebar-left{float:left;border-left:4px solid #71d47c;height:2rem;line-height:2rem;}
+.x-titlebar-left span{padding-left:0.5rem;}
 .text-white{ color:#333333;}
-.x-titlebar-right{float:right;width:1.45rem;height:1.45rem;}
+
+.x-titlebar-right{float:right;width:1rem;height:1rem;}
 .x-cards{ background-color:#fff;}
 .x-cards .row{margin:0;}
 .x-menu2 .col{padding:0;overflow:hidden;}
@@ -24,7 +24,7 @@ body{font-family: 微软雅黑;}
 #goods .x-row  .col-xs-3{border-top:1px solid #f0f0f0;}
 #goods .x-row  .col-xs-3+.col-xs-3{border-left:1px solid #f0f0f0;}
 
-.split{height:1.125rem;background-color:#f0f0f0;}
+.split{height:10px;background-color:#f0f0f0;}
 
 #insurance .x-row .col-xs-6>.col-xs-6{padding-top:3px;border-top:1px solid #f0f0f0;border-left:1px solid #f0f0f0;}
 

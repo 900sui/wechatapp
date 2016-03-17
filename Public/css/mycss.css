@@ -84,7 +84,8 @@ a {
 }
 
 .content {
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-indent: 2em;
 }
 
@@ -207,7 +208,7 @@ a {
 }
 
 .comment_content {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .comment_louzhu {
