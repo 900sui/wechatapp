@@ -1,16 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-
     <include file="Public/header"/>
-
 </head>
 <body>
 <div id="header">
     <include file="Public/head"/>
 </div>
 
+<!-- 	<div class="index_image">
+	<div>
+		<div style=""><img src="./images/2.jpg" alt="" class="index_img"></div>
+		<div class="index_title2"style="margin-top:15px;">全身淋巴排毒套餐
+			<div style="font-size:16px;margin-top:5px;color:#444444">全身淋巴排毒套餐</div>
+		</div>
+	</div>
+	<div class="index_price">
+		<span class="price1">￥980.00 </span>
+		<span class="price2">￥5980.00</span>
+		<div class="shoukong">已售0</div>
+	</div>
+</div>
 
+ -->
 <div id="wrapper">
     <div id="scroller">
         <div id="pullDown" class="idle">
@@ -27,10 +39,29 @@
     </div>
     <script>
         $(document).ready(function () {
+
             if (latitude != null && longitude != null) {
                 loaded(latitude, longitude);
             }
 
+            // 排序
+            $('#box-3').children('.px').click(function (e) {
+                $(this).addClass("click").siblings().removeClass("click");
+                var oid = $(this).attr('id');
+                $('#order').val(oid);
+
+                loaded(latitude, longitude, oid);
+                e.stopPropagation();
+            })
+            // 服务时长
+            $('.btn_s').click(function () {
+                var priceid = $('#pi_ce').val();
+                var srevetimeid = $('#s_time').val();
+                var oid = $('#order').val();
+                $('#box-4').css('display', 'none')
+
+                loaded(latitude, longitude, oid, priceid, srevetimeid);
+            })
             /* wx.config({
              debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
              appId: 'wx1c7041549642a8d9', // 必填，公众号的唯一标识
@@ -38,9 +69,9 @@
              nonceStr: '{$noncestr}', // 必填，生成签名的随机串
              signature: '{$signature}',// 必填，签名，见附录1
              jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-             });
+             });*/
 
-             wx.ready(function () {
+            /* wx.ready(function () {
              var latitude = '';
              var longitude = '';
              wx.getLocation({
@@ -52,6 +83,7 @@
              var speed = res.speed; // 速度，以米/每秒计
              var accuracy = res.accuracy; // 位置精度
              loaded(latitude, longitude);
+
              // 排序
              $('#box-3').children('.px').click(function (e) {
              $(this).addClass("click").siblings().removeClass("click");
@@ -59,9 +91,8 @@
              $('#order').val(oid);
              loaded(latitude, longitude, oid);
              e.stopPropagation();
-             });
+             })
              // 服务时长
-
              $('.btn_s').click(function () {
              var priceid = $('#pi_ce').val();
              var srevetimeid = $('#s_time').val();
@@ -69,28 +100,10 @@
              $('#box-4').css('display', 'none')
 
              loaded(latitude, longitude, oid, priceid, srevetimeid);
-             });
-
+             })
              }
              });
              });*/
-            $('#box-3').children('.px').click(function (e) {
-                $(this).addClass("click").siblings().removeClass("click");
-                var oid = $(this).attr('id');
-                $('#order').val(oid);
-                loaded(latitude, longitude, oid);
-                e.stopPropagation();
-            });
-            // 服务时长
-
-            $('.btn_s').click(function () {
-                var priceid = $('#pi_ce').val();
-                var srevetimeid = $('#s_time').val();
-                var oid = $('#order').val();
-                $('#box-4').css('display', 'none')
-
-                loaded(latitude, longitude, oid, priceid, srevetimeid);
-            });
         });
 
     </script>
@@ -111,10 +124,9 @@
             e.preventDefault();
         }, false);
 
-        //用pjax监控所有分页链接并定义pjax来实现更新
-        $(document).pjax('#thelist a', '#thelist', {fragment:'#thelist', timeout:5000});
 
         function loaded(lat, lon, or, pr, er) {
+
             order = arguments[2] ? arguments[2] : 0;     // 排序id
             price = arguments[3] ? arguments[3] : 0;     // 价格
             erv_time = arguments[4] ? arguments[4] : 0; // 服务时间
@@ -134,10 +146,11 @@
             page = 1;
 
             $.get("{:U('ZhCard/datalist')}", {
-                "page": page,
-                "pagesize": PAGESIZE,
+                'page': page,
+                'pagesize': PAGESIZE,
                 'wd': lat,
                 'jd': lon,
+                'type': 'tc',
                 'order': order,
                 'price': price,
                 'time': erv_time,
@@ -145,17 +158,17 @@
                 //alert(response);
                 var rep = eval("(" + response + ")");
                 if (rep.total == 0) {
-                    // alert('已显示全部');
+                    alert('暂无数据');
                     return false;
                 }
                 if (rep.error == 1) {
-                    // alert(rep.errorMsg);
+                    alert(rep.errorMsg);
                     return false;
                 }
 
-
                 if (status == "success") {
                     $("#thelist").show();
+
                     if (rep.total < PAGESIZE) {
                         hasMoreData = false;
                         $("#pullUp").hide();
@@ -163,7 +176,6 @@
                         hasMoreData = true;
                         $("#pullUp").show();
                     }
-
                     // document.getElementById('wrapper').style.left = '0';
                     if(myScroll != null){
                         myScroll.destroy();
@@ -185,11 +197,11 @@
                         onScrollMove: function () {
                             if (this.y > OFFSET && !pullDownEl.className.match('flip')) {
                                 pullDownEl.className = 'flip';
-                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '刷新...';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = 'loading';
                                 this.minScrollY = 0;
                             } else if (this.y < OFFSET && pullDownEl.className.match('flip')) {
                                 pullDownEl.className = 'idle';
-                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = 'loading...';
                                 this.minScrollY = -pullDownOffset;
                             }
                             if (this.y < (maxScrollY - pullUpOffset - OFFSET) && !pullUpEl.className.match('flip')) {
@@ -223,10 +235,10 @@
                         }
                     });
 
-                    $("#thelist").empty(); //data-ajax="false"
+                    $("#thelist").empty();
                     $.each(rep.data, function (key, value) {
 
-                        $("#thelist").append('<div class="con_list" ><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + lon + '&wd=' + lat + '"  rel="external" data-ajax="false" ><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt=""></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                        $("#thelist").append('<div class="index_image"><a href="{:U("combo_detail")}?cid=' + value.good_id + '&jd=' + lon + '&wd=' + lat + '"  rel="external" data-ajax="false" ><div> <div style=""><img src="' + value.goodsImg + '" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">' + value.name + '<div style="margin-top:5px;color:#444444">' + value.short_name + '</div></div><div class="index_price"><span class="price1">￥' + value.favourable + ' </span><span class="price2"><s>￥' + value.cost + '</s></span><div class="shoukong">已售' + value.sales + '</div></div></a></div>');
 
                     });
                     // $("#thelist").listview("refresh");
@@ -234,14 +246,12 @@
                     // pullDownEl.className = 'idle';
                     // pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
                     // this.minScrollY = -pullDownOffset;
-
                     if (hasMoreData) {
                         myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
                     } else {
                         myScroll.maxScrollY = myScroll.maxScrollY;
                     }
                     maxScrollY = myScroll.maxScrollY;
-                    setdatacache();
                 }
             });
 
@@ -255,6 +265,7 @@
                 "pagesize": PAGESIZE,
                 'wd': w,
                 'jd': j,
+                'type': 'tc',
                 'order': order,
                 'price': price,
                 'time': erv_time,
@@ -272,7 +283,8 @@
                     }
 
                     $.each(rep.data, function (key, value) {
-                        $("#thelist").append('<div class="con_list"><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+
+                        $("#thelist").append('<div class="index_image"><a href="{:U("combo_detail")}?cid=' + value.good_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false" ><div> <div style=""><img src="' + value.goodsImg + '" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">' + value.name + '<div style="margin-top:5px;color:#444444">' + value.short_name + '</div></div><div class="index_price"><span class="price1">￥' + value.favourable + ' </span><span class="price2"><s>￥' + value.cost + '</s></span><div class="shoukong">已售' + value.sales + '</div></div></a></div>');
                     });
                     // $("#thelist").listview("refresh");
                     myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
@@ -295,6 +307,7 @@
                 "pagesize": PAGESIZE,
                 'wd': w,
                 'jd': j,
+                'type': 'tc',
                 'order': order,
                 'price': price,
                 'time': erv_time,
@@ -308,9 +321,8 @@
                         hasMoreData = true;
                         $("#pullUp").show();
                     }
-
                     $.each(rep.data, function (key, value) {
-                        $("#thelist").append('<div class="con_list"><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                        $("#thelist").append('<div class="index_image"><a href="{:U("combo_detail")}?cid=' + value.good_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false" ><div> <div style=""><img src="' + value.goodsImg + '" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">' + value.name + '<div style="margin-top:5px;color:#444444">' + value.short_name + '</div></div><div class="index_price"><span class="price1">￥' + value.favourable + ' </span><span class="price2"><s>￥' + value.cost + '</s></span><div class="shoukong">已售' + value.sales + '</div></div></a></div>');
                     });
                     // $("#thelist").listview("refresh");
                     myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
@@ -328,10 +340,7 @@
 
     </script>
 </div>
-
-<!--    <div id="footer"></div> -->
-
-
 </body>
+
 
 </html>

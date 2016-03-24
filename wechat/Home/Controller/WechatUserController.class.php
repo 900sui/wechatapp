@@ -27,13 +27,12 @@ class WechatUserController extends Controller
         $this->access_token = $_SESSION["access_token"];
         //dump(ACTION_NAME);die();
         if (empty($this->openid) || empty($this->access_token)) {
-            redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1c7041549642a8d9".
-            "&redirect_uri=http%3a%2f%2fweixin2.900sui.com%2fwechatapp%2fHome%2fWechat%2fgetWechatUser&".
-            "response_type=code&scope=snsapi_userinfo&state=".ACTION_NAME."#wechat_redirect");
+            redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1c7041549642a8d9" .
+                "&redirect_uri=http%3a%2f%2fweixin2.900sui.com%2fwechatapp%2fHome%2fWechat%2fgetWechatUser&" .
+                "response_type=code&scope=snsapi_userinfo&state=" . ACTION_NAME . "#wechat_redirect");
         }
 
     }
-
 
 
     //判断是否绑定
@@ -50,7 +49,8 @@ class WechatUserController extends Controller
             if (isset($result->data->request)) {
                 $this->redirect('WechatUser/loginUser', '', 3, '请先绑定数据');
             } else {
-                dump($result);
+
+                //dump($result);
             }
         } else {
             echo "<script>alert(" . $result->errorMsg . ")</script>";
@@ -60,21 +60,24 @@ class WechatUserController extends Controller
     //微信公众号绑定
     public function bindUser()
     {
-        /* $url = BASE_URL . "ThirdParty/bindForWeiXinPublic";
-         $param['open_id'] = "oq5bfs2tD_-aInMNecyTOD5DJylg";
-         $param['phone'] = I('post.mobile');
-         $param['password'] = I('post.password');
-         $t = new token();
-         $param['token'] = $t->set_token($param);
-         $ch = new curl();
-         $res = $ch->http($url, $param,'POST');*/
-        dump($_SESSION['openid']);
-        dump($this->openid);
-        dump($_GET);
+
+        $url = BASE_URL . "ThirdParty/bindForWeiXinPublic";
+        $param['open_id'] = $this->openid;
+        $param['phone'] = I('post.mobile');
+        $param['password'] = I('post.password');
+        $t = new token();
+        $param['token'] = $t->set_token($param);
+        $ch = new curl();
+        $res = $ch->http($url, $param, 'POST');
+        //dump($_SESSION['openid']);
+        //dump($this->openid);
+        dump($res);
         $this->display();
+
     }
 
     //短信验证码
+
     public function smsCode()
     {
         //echo I('post.mobile');

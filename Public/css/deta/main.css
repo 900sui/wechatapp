@@ -5,7 +5,7 @@
 *这对精确定位是很有帮助的。
 */
 *{
-
+    margin: 0;
     padding: 0;
 	list-style-type:none;
 }
@@ -19,14 +19,12 @@ div.nav{
     position: relative;
     /*margin-bottom: 5%;*/
     z-index: 9;
-    margin: 0;
 }
 /*nav-main*/
 ul.nav-main{
     width: 100%;
     height: 100%;
     list-style-type: none;
-
 }
 ul.nav-main span{
     display: inline-block;
@@ -68,9 +66,15 @@ ul.nav-main>li:hover{
 }
 /*隐藏盒子设置*/
 div.hidden-box{
+    /*z-index: 9px;*/
+    /*width: 91px;*/
+    /*border: 1px solid #f0f0f0;*/
     border-top: 0;
+    /*position: absolute;*/
     display:none;
+	background:#fff;
     color: #000;
+    /*top: 36px;*/
 }
 .hidden-box>ul{
     list-style-type: none;
@@ -95,4 +99,3 @@ div.hidden-box{
 .box04{
 	left:273px;
 }
-

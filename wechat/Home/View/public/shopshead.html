@@ -1,0 +1,146 @@
+   <style>
+    .headnav{
+           height: 50px;margin-bottom: 0px; z-index:999;   padding-top: 5px;
+        }
+        .headlist { width: 70%;margin: 0 auto;text-shadow:none !important;font-size: 15px;color:#fff;height: 40px;}
+
+        .headlist div{width: 31%; float:left;border:1px solid #70D47A;height: 30px;line-height: 30px; color:#70D47A}
+        .head1{border-radius: 7px 0 0 7px;}
+        .head2{border-radius: 0px;}
+        .head3{border-radius: 0 7px 7px 0;}
+        .bg{background-color:#70D47A; color: #fff !important;}
+
+        .hidden-box{display: block; position: absolute; left: 0px;width: 100%;     background-color: rgba(0, 0, 0, 0.42);
+    height: 1000px;}
+        #box-3 div,#box-1 div,#box-2 div,#box-4 div{border-top: 1px solid #EAEAEA;background-color:#fff;}
+      
+        .bg_c{background-color: rgba(111, 111, 111, 0.33) !important; height:437px;}
+        .click{color:red;}
+
+
+       .serverlist{padding-bottom: 12px;}
+       .serverlist p{float: left}
+       .serverlist a{display: inline-block;  border: 1px solid #C7C5C5;font-weight:100 !important;height: 27px;line-height: 27px;margin: 0 5px;border-radius: 7px;   width: 20%;}
+       .S_M{padding: 7px;}
+       .xuangzhong{background-color:#70D47A ; text-shadow: none; color: white !important; border-color:#70D47A !important;}
+       .tit{text-align:  left;;padding-left: 22px;}
+       .btn_s{background-color:#70D47A !important;color: #fff; margin: 10px auto;
+    width: 70%;
+    border-radius: 6px;}
+    
+   </style>
+
+   <div class='headnav'>
+       <div class='headlist'>
+           <div  class='head1 {$fw}'>商家</div> 
+           <!-- <div  class='head2 {$tc}'>套餐</div>
+           <div  class='head3 {$zh}'>综合卡</div> -->
+          <span  style='clear: both;'></span>
+      </div>
+
+
+  <div class="nav">
+  <!--导航条-->
+  <ul class="nav-main">
+    <li id="li-1">区域<span></span>
+      <div id="box-1" class="hidden-box hidden-loc-index">
+        
+        <div class='innbox'>
+          <div><a href="">杨浦</a></div>
+          <div><a href="">徐汇</a></div>
+          <div><a href="">虹桥</a></div>
+          <div><a href="">浦东</a></div>
+          <div><a href="">普陀</a></div>
+          <div><a href="">闸北</a></div>
+        </div>
+     
+      </div>
+    </li>
+    <li id="li-2">分类<span></span>
+      <div id="box-2" class="hidden-box hidden-loc-us">
+        <div class='innbox'>
+          <div><a href="">美容</a></div>
+          <div><a href="">美发</a></div>
+          <div><a href="">美甲</a></div>
+          <div><a href="">推拿</a></div>
+          <div><a href="">汗蒸</a></div>
+          <div><a href="">养生</a></div>
+      </div>
+      </div>
+    </li>
+    <li id="li-3">排序<span></span>
+      <div id="box-3" class="hidden-box hidden-loc-info">
+       
+          <div class='px click' id='0'>默认排序</div>
+          <div class='px' id='1'>销量</div>
+          <div class='px' id='2'>价格</div>
+          <div class='px' id='3'>好评</div>
+          <div class='px' id='4'>发布时间</div>
+       
+      </div>
+    </li>
+
+    <li id="li-4">筛选<span></span>
+      <div id="box-4" class="hidden-box hidden-loc-info box04">
+       <div class='serverlist innbox'>
+        <div class='tit' style='display:{$hidd}'>服务时长(分)</div>
+        <div class='S_M' style='display:{$hidd}'>
+          <a name='1'>0-30</a>
+          <a name='2'>30-60</a>
+          <a name='3'>60-120</a>
+          <a name='4'>120</a>
+        </div>
+        <div class='tit'>价格(元)</div>
+        <div class='price'>
+          <a name='1'>200以下</a>
+          <a name='2'>200-500</a>
+          <a name='3'>500-1000</a>
+          <a name='4'>1000-1500</a>
+          <a name='5'>1500-2000</a>
+          <a name='6'>2000以上</a>
+        </div>
+        <div class='btn_s'>确认</div>
+      </div>
+      </div>
+    </li>
+  </ul>
+  <!--隐藏盒子-->
+  </div>
+    <input type='hidden' id='order'  value=''/> 
+    <input type='hidden' id='s_time'  value=''/> 
+    <input type='hidden' id='pi_ce'  value=''/> 
+</div>
+   <script>
+    $(function(){
+
+       $('.head1').click(function(){
+        location.href="{:U('ZhCard/serve')}";
+       })
+
+       $('.head2').click(function(){
+       location.href="{:U('ZhCard/combo')}";
+       })
+
+        $('.head3').click(function(){
+        location.href="{:U('ZhCard/index')}";
+       })
+
+    })
+      $('.S_M').children('a').click(function(){
+        var servetime = $(this).attr('name');
+        $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
+         
+         $('#s_time').val(servetime);
+         
+      })
+      $('.price').children('a').click(function(e){
+        var price = $(this).attr('name');
+        $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
+        $('#pi_ce').val(price);
+         e.stopPropagation(); 
+      })
+
+      $('.serverlist').click(function(e){
+        e.stopPropagation(); 
+      })
+   </script>

@@ -7,6 +7,5 @@ return array(
     'DB_NAME' => 'Wesambo',
     'DB_USER' => 'root',
     'DB_PWD' => '',
-    'DB_PREFIX' => 'tp_',
-    'API_URL'=>'http://jkd2.shutung.com:81/App/v3/'
+    'DB_PREFIX' => 'tp_'
 );

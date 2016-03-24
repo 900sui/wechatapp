@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>综合卡</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/main.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/detail.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="servedetail_header">
+
+    <div class="header_img">
+        <img src="{$res.img}"/>
+        <span class="header_img_num"></span>
+			<span class="servedetail_title">
+				<div>{$res.card_name}</div>
+				<div>{$res.user_bus.shop_name}</div>
+			</span>
+    </div>
+    <div class="servedetail_fork btc">
+        <span class="lv">￥{$res.real_price}</span>
+        <s>￥{$res.price}</s>
+        <span>已售{$res.sales}</span>
+        <a href='http://www.900sui.com/help-download.html'>
+				<span class="serve_cart right">
+					前往app购买
+                    <!--<img src="__PUBLIC__/img/cart.png">
+                    <img src="__PUBLIC__/img/plus.png" style="width: 30%;margin-top: 10%">-->
+			   </span>
+        </a>
+        <div class="clear"></div>
+    </div>
+    <div class="servedetail_fork btc">
+        <img src="__PUBLIC__/img/tipgreen.png">
+        <span>特别提示：购买本服务，可免费获得预付卡保险</span>
+        <div class="clear"></div>
+    </div>
+    <div class="servedetail_fork btc">
+        <img src="__PUBLIC__/img/tipgreen.png">
+        <span>{$res.service_period}</span>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="shop_info">
+
+        <div class="shop_info_detail btc">
+            <span class="shop_info_title">商户信息</span>
+            <div><b>{$res.user_bus.company_name}</b><span class="right" style='display:none'>8.1km</span></div>
+            <div class="shop_info_link left">
+                <div>电话:{$res.user_bus.phone}</div>
+                <div>地址：{$res.user_bus.uaddress}</div>
+            </div>
+            <div class="telright right">
+                <a href="tel:{$res.user_bus.phone}"><img src="__PUBLIC__/img/telright.png"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- 	<div class="fendian">
+            <span>分店(3)</span>
+            <div class="right">
+                <img src="__PUBLIC__/img/right.png" width="32px">
+            </div>
+            <div class="clear"></div>
+        </div> -->
+
+    <div class="menber_price">
+        <div class="menber_price_title">服务详情</div>
+        {$res.service_period}
+    </div>
+
+    <div class="menber_price">
+        <div class="menber_price_title">购买须知</div>
+        {$res.notes}
+    </div>
+
+</div>
+</body>
+</html>
