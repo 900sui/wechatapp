@@ -30,7 +30,7 @@ class HealthBbsController extends Controller
 
         if ($result->error == 0) {
             $comment = $result->data;
-            dump($comment);
+           // dump($comment);
             $this->assign('icon', $comment->poster_icon);
             $this->assign('title', $comment->title);
             $this->assign('poster', $comment->poster);

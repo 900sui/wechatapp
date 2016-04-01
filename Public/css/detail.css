@@ -45,8 +45,10 @@ a {
 }
 
 .btc {
-    border-bottom: 1px solid #dfdfdf
+    border-bottom: 1px solid #dfdfdf;
+    word-wrap:break-word; overflow:hidden;
 }
+
 
 .red {
     color: red
@@ -365,3 +367,56 @@ a {
     padding: 0px 10px;
     background-color: #fff;
 }
+
+.transfer_header{width: 100%}
+.transfer_header_img img{width: 100%;
+    height: 290px;
+    position: relative;}
+.transfer_header_user{background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 230px;
+    left: 26px;
+    width: 125px;
+    border-radius: 40px;
+    padding: 7px;}
+.transfer_header_user img{width: 30px;
+    height: 30px;
+    border-radius: 40px}
+.transfer_info div{height: 44px;
+    line-height: 44px;
+    padding-left: 5px}
+.transfer_gmbtn{width: 88px;
+    text-align: center;
+    margin-right: 5%;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 4px;}
+.transfer_info_time{color: #7e7e7e}
+.transfer_info_time img{
+    width: 32px;
+    height: 32px
+}
+.transfer_dt_header{height: 40px;
+    line-height: 40px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 2%;}
+.transfer_dt_header img{width: 39px;}
+.transfer_safetime{height: 50px;
+    line-height: 50px;
+    background: #fff;
+    margin-top: 10px;
+    padding-left: 10px}
+.transfer_safetime img{width: 23px}
+.transfer_tel{height: 88px;
+    padding: 27px 10px;}
+.serve_dt_header{height: 40px;
+    line-height: 40px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 2%;}
+.serve_dt_header span img{width: 100%;
+    padding-top: 8px}
+.serve_dt_header .ddfk{float: right;
+    margin-right: 3%;
+    color: #EF834B}

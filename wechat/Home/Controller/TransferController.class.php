@@ -26,10 +26,11 @@ class TransferController extends Controller
         $ch = new curl();
         $res = $ch->http($url,$param);
         $result = json_decode($res,true);
-        dump($result);
+      // dump($result);
         if($result->error == 0){
             $this->assign('detail',$result['data']);
-            $this->assign('img',explode(',',$result['data']['images'])[0]);
+            $images = explode(',',$result['data']['images']);
+            $this->assign('img',$images[0]);
             if($goods_type == 2){
                 $this->display('iCard');
             }
@@ -52,12 +53,13 @@ class TransferController extends Controller
         $ch = new curl();
         $res = $ch->http($url,$param);
         $result = json_decode($res,true);
-        dump($result);
+        //dump($result);
         if($result->error == 0){
             $this->assign('detail',$result['data']);
-            $this->assign('img',explode(',',$result['data']['images'])[0]);
+            $images = explode(',',$result['data']['images']);
+            $this->assign('img',$images[0]);
             if($goods_type == 2){
-                $this->display('auctionCard');
+                $this->display('iCard');
             }
             if($goods_type == 1){
                 $this->display('sm_service');

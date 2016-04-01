@@ -15,22 +15,24 @@ use Think\Controller;
 
 class OneExpenController extends Controller
 {
-    public function oneExpenDetail(){
+    public function oneExpenDetail()
+    {
 
-        $url = BASE_URL."OneExpen/goodsDetail";
+        $url = BASE_URL . "OneExpen/goodsDetail";
         $param['goodsId'] = $_GET['goodsid'];
-       // $token = new token();
-        //$param['token'] = $token->set_token($param);
+        $token = new token();
+        $param['token'] = $token->set_token($param);
         $ch = new curl();
-        $res = $ch->http($url,$param);
-        $result = json_decode($res,true);
-        //dump($result);
-        if($result->error==0){
-            $this->assign('goods',$result['data']);
+        $res = $ch->http($url, $param);
+        $result = json_decode($res, true);
+
+        if ($result->error == 0) {
+            $this->assign('goods', $result['data']);
             $this->display();
-        }else{
+        } else {
             echo "<script>alert('$result->errorMsg');</script>";
         }
+
     }
 
 }
