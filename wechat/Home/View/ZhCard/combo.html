@@ -23,7 +23,9 @@
 </div>
 
  -->
+<hidden id="service_type">3</hidden>
 <div id="wrapper">
+
     <div id="scroller">
         <div id="pullDown" class="idle">
             <span class="pullDownIcon"></span>
@@ -38,14 +40,16 @@
         </div>
     </div>
     <script>
+        var service_type = $('#service_type').html();
+
         $(document).ready(function () {
 
             if (latitude != null && longitude != null) {
-                loaded(latitude, longitude);
+                loaded(31.223459,  121.452641);
             }
 
             // 排序
-            $('#box-3').children('.px').click(function (e) {
+           /* $('#box-3').children('.px').click(function (e) {
                 $(this).addClass("click").siblings().removeClass("click");
                 var oid = $(this).attr('id');
                 $('#order').val(oid);
@@ -61,7 +65,7 @@
                 $('#box-4').css('display', 'none')
 
                 loaded(latitude, longitude, oid, priceid, srevetimeid);
-            })
+            })*/
             /* wx.config({
              debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
              appId: 'wx1c7041549642a8d9', // 必填，公众号的唯一标识
@@ -125,7 +129,7 @@
         }, false);
 
 
-        function loaded(lat, lon, or, pr, er) {
+        function loaded(lat, lon) {
 
             order = arguments[2] ? arguments[2] : 0;     // 排序id
             price = arguments[3] ? arguments[3] : 0;     // 价格
@@ -144,16 +148,20 @@
             pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
 
             page = 1;
-
+            $("#thelist").empty();
+            //alert(oid);
             $.get("{:U('ZhCard/datalist')}", {
                 'page': page,
                 'pagesize': PAGESIZE,
                 'wd': lat,
                 'jd': lon,
-                'type': 'tc',
-                'order': order,
-                'price': price,
-                'time': erv_time,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
             }, function (response, status) {
                 //alert(response);
                 var rep = eval("(" + response + ")");
@@ -235,7 +243,7 @@
                         }
                     });
 
-                    $("#thelist").empty();
+                   // $("#thelist").empty();
                     $.each(rep.data, function (key, value) {
 
                         $("#thelist").append('<div class="index_image"><a href="{:U("combo_detail")}?cid=' + value.good_id + '&jd=' + lon + '&wd=' + lat + '"  rel="external" data-ajax="false" ><div> <div style=""><img src="' + value.goodsImg + '" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">' + value.name + '<div style="margin-top:5px;color:#444444">' + value.short_name + '</div></div><div class="index_price"><span class="price1">￥' + value.favourable + ' </span><span class="price2"><s>￥' + value.cost + '</s></span><div class="shoukong">已售' + value.sales + '</div></div></a></div>');
@@ -265,10 +273,9 @@
                 "pagesize": PAGESIZE,
                 'wd': w,
                 'jd': j,
-                'type': 'tc',
+                'type': service_type,
                 'order': order,
-                'price': price,
-                'time': erv_time,
+                'filter':JSON.stringify(filterlist)
             }, function (response, status) {
                 var rep = eval("(" + response + ")");
                 if (status == "success") {
@@ -307,10 +314,9 @@
                 "pagesize": PAGESIZE,
                 'wd': w,
                 'jd': j,
-                'type': 'tc',
+                'type': service_type,
                 'order': order,
-                'price': price,
-                'time': erv_time,
+                'filter':JSON.stringify(filterlist)
             }, function (response, status) {
                 var rep = eval("(" + response + ")");
                 if (status == "success") {

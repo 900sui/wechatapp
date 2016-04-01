@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="__PUBLIC__/css/goods/profile.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    a{text-decoration:none;}
+    .detail_link  {height: auto !important;    font-size: 12px;}
+    .detail_link ul {height: auto !important;}
+    .detail_link ul li {height:7% !important;}
+    .top{margin-top:-22px;}
+    .detail_link ul li img { width: 27px; margin-right: 5px; height: 27px;}
+    .js_name{ padding: 10px 0px 35px;}
+    .technician{height:30%;}
+    </style>
+</head>
+<body>
+    <div class='top'></div>
+    <div class="holead">
+        <div class="head">
+            <img src="{$arrty['img']}" class="images" />
+        </div>
+        <span class="span1">{$arrty['name']}</span>
+        <span>{$arrty['position']}</span>
+        <div class="xinxin">{$arrty['score']}</div>
+    </div>
+    <div class="detail_link_box">
+        <div class="detail_link">
+            <ul>
+                <li btm=""><img src="__PUBLIC__/images/home.png"><div class="text_btn">技师详情</div></li>
+                <li>
+                    <span class="mark">技师简介:{$arrty['mark_info']}</span>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="detail_link_box">
+        <div class="detail_link">
+            <ul>
+                <li btm=""><img src="__PUBLIC__/images/home.png"><div class="text_btn">证书</div></li>
+                <div class="clear"></div>
+
+            </ul>
+        </div>
+    </div>
+    <div class="detail_link_box">
+        <div class="detail_link">
+            <ul>
+                <li btm=""><img src="__PUBLIC__/images/home.png"><div class="text_btn">工作瞬间</div></li>
+                <div class="clear"></div>
+
+            </ul>
+        </div>
+    </div>
+    <div class="detail_link_box">
+        <div class="detail_link">
+            <ul>
+                <li btm=""><img src="__PUBLIC__/images/home.png"><div class="text_btn">全部评论（{$arrty['comments']}）</div></li>
+                <div class="clear"></div>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,8 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 微软雅黑;
-    color: #333333;
+    font-family: '幼圆'
 }
 
 body, html {
@@ -13,9 +12,21 @@ body, html {
 }
 
 body {
-    background: #f0f0f0
-}
 
+}
+.content1-picture {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.content1-picture .image{
+    width:60px;
+    height: 60px;
+    border-radius:50px;
+} 
+.text_nr{
+    font-size: 12px;
+}
 .row {
     margin: 0;
 }
@@ -34,6 +45,8 @@ a {
 
 .right {
     float: right;
+    height: 34px;
+    line-height: 34px;
 }
 
 .text-algin {
@@ -85,9 +98,7 @@ a {
 }
 
 .content {
-    padding-left: 5%;
-    padding-right: 5%;
-    /*text-indent: 2em;*/
+    text-indent: 2em;
 }
 
 .fw, .tc, .ka {
@@ -209,13 +220,12 @@ a {
 }
 
 .comment_content {
-    margin: 2%;
+    margin-top: 2%;
 }
 
 .comment_louzhu {
     font-weight: 800;
-    margin-right: 5px;
-    color: #333333;
+    margin-right: 5px
 }
 
 .comment_time {
@@ -231,10 +241,7 @@ a {
 }
 
 .ka {
-    background: #feb11b;
-    padding: 0px;
-
-
+    background: #feb11b
 }
 
 .con_comment {
@@ -252,9 +259,8 @@ a {
 
 .comment_title {
     text-align: center;
-    margin: 3%;
+    margin-top: 3%;
     font-weight: bold;
-
 }
 
 .comment_content .image_description {
@@ -262,16 +268,8 @@ a {
 }
 
 .comment_content img {
-    width: 100% !important;
-    height: auto !important;
-    /*text-indent: 0 !important;*/
-    /*padding-left: 5%;*/
-}
-.content p{
-    /*text-indent: 0 !important;*/
-}
-.comment_content{
-   /*text-indent: 2em;*/
+    width: 95%;
+    padding-left: 5%;
 }
 
 

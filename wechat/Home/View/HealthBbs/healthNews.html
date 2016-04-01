@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="{$summary}" />
+
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+    <style>
+        .comment_content img{
+            width:100% !important;
+            height: auto !important;
+            padding: 0;
+        }
+        .comment_title{
+            font-size: 1em;
+        }
+        .comment_content{
+            font-size: 0.85em;
+        }
+    </style>
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+        <img src='{$img}' />
+    </div>
+</head>
+<body>
+<div class="comment_title">
+    {$title}
+</div>
+<div class="comment_content">
+    {$content}
+</div>
+</body>
+</html>

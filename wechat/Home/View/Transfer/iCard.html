@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/main.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/detail.css" rel="stylesheet">
+    <title></title>
+    <style>
+        /*goodsdetail*/
+
+    </style>
+</head>
+<body>
+<div class="servedetail_header">
+    <div class="header_img">
+        <img src="{$img}" />
+			<span class="servedetail_title">
+				<div style="color:#fff">{$detail.title}</div>
+				<!--<div><span style='font-size:10px;color:#fff'>{$res.short_name}</span></div>-->
+			</span>
+    </div>
+    <div class="servedetail_fork btc">
+        <span class="lv">￥{$detail.price}</span>
+        <s>￥</s>
+        <!--<span>已售{$res.sales}</span>-->
+        <a href='http://www.900sui.com/help-download.html'>
+			<span class="serve_cart right" style="background: #6DD481;color: #fff">
+				前往app购买
+                <!--<img src="__PUBLIC__/img/cart.png">
+                <img src="__PUBLIC__/img/plus.png" style="width: 30%;margin-top: 10%">-->
+			</span></a>
+        <div class="clear"></div>
+    </div>
+    <!--<div class="servedetail_fork">
+        <span style="color: #71D47C">★★★★★</span> {$res.comments}分</span>
+    </div>-->
+</div>
+
+<div class="shop_info">
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>套餐详情</span>
+    </div>
+    <!-- <span class="shop_info_title">商户信息</span> -->
+    <div class="shop_info_detail btc">
+        <div class="shop_info_link left">
+            <div>{$info.company_name}</div>
+            <div>{$info.uaddress}</div>
+            <span><if condition="$res.phone eq null">暂无电话
+                <else/>
+                {$res.phone}
+            </if></span>
+        </div>
+        <div class="telright right">
+            <a href="tel:{$res.phone}"><img src="__PUBLIC__/img/telright.png"></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="goods_detail_comment" style='margin-top: 4%'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>服务详情</span>
+    </div>
+    <div>
+        {$res.content}
+    </div>
+</div>
+</body>
+</html>

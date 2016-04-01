@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>体验详情</title>
+    <style>
+        /*goodsdetail*/
+        .shop_info {
+            background: #fff
+        }
+
+        .serve_dt_header {
+            height: 40px;
+            line-height: 40px;
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 0 2%;
+        }
+
+        .serve_dt_header span img {
+            width: 100%;
+            padding-top: 0;
+        }
+
+        .serve_dt_header .ddfk {
+            float: right;
+            margin-right: 3%;
+            color: #EF834B
+        }
+
+        .goods_detail_comment {
+            background: #fff;
+
+        }
+
+        .goods_detail_comment div p {
+            margin: 0;
+        }
+
+        .goods_detail_comment div {
+            padding: 0 15px 15px
+        }
+
+        .goods_detail_comment div img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+    </style>
+</head>
+<body>
+<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/css/main.css" rel="stylesheet">
+<link href="__PUBLIC__/css/detail.css" rel="stylesheet">
+<div class="servedetail_header">
+    <div class="header_img">
+        <img src="{$goods.path}"/>
+			<span class="servedetail_title">
+				<div style="color:#fff">{$goods.name}</div>
+				<div><span style='font-size:0.65em;color:#fff'>{$goods.shop_name}</span></div>
+			</span>
+    </div>
+    <div class="servedetail_fork btc">
+        <span class="lv">￥1</span>
+        <s>￥{$goods.price}</s>
+        <span>数量{$goods.use_num}/{$goods.num}</span>
+        <a href='http://www.900sui.com/help-download.html'>
+			<span class="serve_cart right" style="background: #6DD481;color: #fff">
+				前往app购买
+                <!--<img src="__PUBLIC__/img/cart.png">
+                <img src="__PUBLIC__/img/plus.png" style="width: 30%;margin-top: 10%">-->
+			</span></a>
+        <div class="clear"></div>
+    </div>
+    <!--<div class="servedetail_fork">
+        <span style="color: #71D47C">★★★★★</span> {$res.comments}分</span>
+    </div>-->
+</div>
+
+<div class="goods_detail_comment" style='margin-top: 4%'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>产品详情</span>
+    </div>
+    <div style="font-size: 0.85em;">
+        {$goods.descr}
+    </div>
+</div>
+
+<div class="goods_detail_comment" style='margin-top: 4%'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>体验流程</span>
+    </div>
+    <div style="font-size: 0.85em;">
+        {$goods.flow_descr}
+    </div>
+</div>
+
+<div class="goods_detail_comment" style='margin-top: 4%'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>注意事项</span>
+    </div>
+    <div style="font-size: 0.85em;">
+        {$goods.items_descr}
+    </div>
+</div>
+
+
+</body>
+</html>

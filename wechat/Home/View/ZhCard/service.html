@@ -7,6 +7,7 @@
 <div id="header">
     <include file="Public/head"/>
 </div>
+<hidden id="service_type">2</hidden>
 <div id="wrapper" style='display:block;'>
     <div id="scroller">
         <div id="pullDown" class="idle">
@@ -23,26 +24,35 @@
         </div>
     </div>
     <script>
+
+        var service_type = $('#service_type').html();
         $(document).ready(function () {
-            if(latitude!=null && longitude !=null){
+
+            if (latitude != null && longitude != null) {
                 loaded(latitude, longitude);
             }
-            // 排序
-            $('#box-3').children('.px').click(function (e) {
 
-                $(this).addClass("click").siblings().removeClass("click");
-                var oid = $(this).attr('id');
-                $('#order').val(oid);
-                loaded(latitude, longitude, oid);
-                e.stopPropagation();
-            })
-            // 服务时长
-            $('.btn_s').click(function () {
+          /*  // 服务时长
+            $('.btn_s').click(function(){
                 var priceid = $('#pi_ce').val();
                 var srevetimeid = $('#s_time').val();
                 var oid = $('#order').val();
-                $('#box-4').css('display', 'none');
-                loaded(latitude, longitude, oid, priceid, srevetimeid);
+                $('#box-4').css('display','none');
+                loaded(latitude, longitude ,oid, priceid, srevetimeid);
+                $(this).parent(".hidden-box").hide();
+            });*/
+            // type  类型
+            $('#box_list').delegate('li','click', function() {
+                $(this).parents('.hidden-box').hide();
+                var priceid = $('#pi_ce').val();
+                var srevetimeid = $('#s_time').val();
+                var oid = $('#order').val();
+                var typelist =  $(this).attr('name');
+                //$('#typelist').val(type);
+                var tp_name = $(this).html();
+                $('.tit').html(tp_name);
+                loaded(latitude, longitude ,oid, priceid, srevetimeid , typelist);
+
             })
             /*
              wx.config({
@@ -54,28 +64,27 @@
              jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
              });
              */
-           /* wx.ready(function () {
+            /* wx.ready(function () {
 
-                wx.getLocation({
-                    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
-                    success: function (res) {
+             wx.getLocation({
+             type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+             success: function (res) {
 
-                        latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
-                        longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+             latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+             longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
 
-                        var speed = res.speed; // 速度，以米/每秒计
-                        var accuracy = res.accuracy; // 位置精度
-                        loaded(latitude, longitude);
+             var speed = res.speed; // 速度，以米/每秒计
+             var accuracy = res.accuracy; // 位置精度
+             loaded(latitude, longitude);
 
 
 
-                    }
-                });
-            });*/
+             }
+             });
+             });*/
         });
 
-    </script>
-    <script>
+
         var OFFSET = 5;
         var page = 1;
         var PAGESIZE = 10;
@@ -94,6 +103,7 @@
 
 
         function loaded(lat, lon, or, pr, er) {
+
             order = arguments[2] ? arguments[2] : 0;     // 排序id
             price = arguments[3] ? arguments[3] : 0;     // 价格
             erv_time = arguments[4] ? arguments[4] : 0; // 服务时间
@@ -111,16 +121,20 @@
             pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
 
             page = 1;
-
+            //alert(JSON.stringify(filterlist));
+            $("#thelist").empty();
             $.get("{:U('ZhCard/datalist')}", {
-                "page": page,
-                "pagesize": PAGESIZE,
+                'page': page,
+                'pagesize': PAGESIZE,
                 'wd': lat,
                 'jd': lon,
-                'type': 'fw',
-                'order': order,
-                'price': price,
-                'time': erv_time,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
             }, function (response, status) {
 
                 var rep = eval("(" + response + ")");
@@ -145,7 +159,7 @@
                     }
 
                     // document.getElementById('wrapper').style.left = '0';
-                    if(myScroll != null){
+                    if (myScroll != null) {
                         myScroll.destroy();
                     }
                     myScroll = new iScroll('wrapper', {
@@ -203,7 +217,7 @@
                         }
                     });
 
-                    $("#thelist").empty();
+                    //$("#thelist").empty();
                     $.each(rep.data, function (key, value) {
 
                         $("#thelist").append('<div class="index_image"><a href="{:U("servicedetail")}?cid=' + value.good_id + '&jd=' + lon + '&wd=' + lat + '"  rel="external"><div> <div style=""><img src="' + value.goodsImg + '" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">' + value.name + '<div style="margin-top:5px;color:#444444">' + value.short_name + '</div></div><div class="index_price"><span class="price1">￥' + value.favourable + ' </span><span class="price2"><s>￥' + value.cost + '</s></span><div class="shoukong">已售' + value.sales + '</div></div></a></div>');
@@ -251,14 +265,17 @@
 
             page = 1;
             $.get("{:U('ZhCard/datalist')}", {
-                "page": page,
-                "pagesize": PAGESIZE,
-                'wd': w,
-                'jd': j,
-                'type': 'fw',
-                'order': order,
-                'price': price,
-                'time': erv_time,
+                'page': page,
+                'pagesize': PAGESIZE,
+                'wd': lat,
+                'jd': lon,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
             }, function (response, status) {
 
                 var rep = eval("(" + response + ")");
@@ -295,14 +312,17 @@
         function nextPage(w, j) {
             page++;
             $.get("{:U('ZhCard/datalist')}", {
-                "page": page,
-                "pagesize": PAGESIZE,
-                'wd': w,
-                'jd': j,
-                'type': 'fw',
-                'order': order,
-                'price': price,
-                'time': erv_time
+                'page': page,
+                'pagesize': PAGESIZE,
+                'wd': lat,
+                'jd': lon,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
             }, function (response, status) {
                 var rep = eval("(" + response + ")");
                 if (status == "success") {

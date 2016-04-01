@@ -7,87 +7,91 @@
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="__PUBLIC__/js/iscroll/jquery-1.9.1.min.js"></script>
     <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <!--<script src="__PUBLIC__/js/iscroll/jquery.mobile-1.3.2.min.js"></script>-->
     <script src="__PUBLIC__/js/iscroll/iscroll.js"></script>
-    <script src="__PUBLIC__/js/iscroll/jquery.mobile-1.3.2.min.js"></script>
-   
-    <script src="__PUBLIC__/js/main.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
 
     <link href="__PUBLIC__/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" >
     <link href="__PUBLIC__/css/main.css" rel="stylesheet"/>   
-    <link href="__PUBLIC__/css/iscroll/jquery.mobile-1.3.2.min.css" rel="stylesheet"/>
+    <!-- <link href="__PUBLIC__/css/iscroll/jquery.mobile-1.3.2.min.css" rel="stylesheet"/> -->
     <link href="__PUBLIC__/css/iscroll/list.css" rel="stylesheet"/>
- <link href="__PUBLIC__/css/combo.css"  rel="stylesheet" >
+    <link href="__PUBLIC__/css/combo.css"  rel="stylesheet" >
+
+ <style>
+ a{color: #868686}
+.clear{clear:both}
+.shop_list{width: 94%; background-color: #FFF; padding: 10px 10px 4px; color: #868686;margin: 5px 0px;}
+.li_img{width: 35%;float: left;}
+.li_msg{width: 65%;float: left;}
+.msg_in{color: #ccc;}
+.msg_in span{display: inline-block;}
+.msg_tit{width: 47%;float:left;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis; overflow: hidden;font-size: 14px;padding-left: 10px;color: #565656 }
+.li_img img {width: 100%; height: 90px;}
+.msg_type{width: 100px;float: right;font-size: 13px;text-align: right;}
+.msg_type span{padding: 1px; color:#FCF4D7; margin: 0 2px;}
+.level{padding-left: 10px; margin: 15px 0px;font-size: 13px;}
+.add{padding-left: 10px;font-size: 14px;}
+.distance{float: right;}
+.icon_add{width:20px;float: left;height: 18px;}
+.card{background-color: #FDB21B}
+.serve{background-color: #EF844A}
+.combo{background-color: #43BBBB}
+
+
+
+/**
+   商家 类别
+**/
+
+        .headnav{ height: 50px;margin-bottom: 0px; z-index:999;   padding-top: 5px;
+        }
+        .headlist { width: 70%;margin: 0 auto;text-shadow:none !important;font-size: 15px;color:#fff;height: 40px;}
+
+        .headlist div{border-radius: 50px;margin: 0 auto;border:1px solid #70D47A;height: 30px;line-height: 30px; color:#70D47A}
+        .head1{border-radius: 7px 0 0 7px;}
+        .head2{border-radius: 0px;}
+        .head3{border-radius: 0 7px 7px 0;}
+        .bg{background-color:#70D47A; color: #fff !important;}
+
+        .hidden-box{display: block; position: absolute; left: 0px;width: 100%;background-color: rgba(0, 0, 0, 0.42);
+    height: 1000px;}
+        #box-3 div,#box-1 div,#box-2 div,#box-4 div{border-top: 1px solid #EAEAEA;background-color:#fff;}
+      
+        .bg_c{background-color: rgba(111, 111, 111, 0.33) !important; height:437px;}
+        .click{color:red;}
+       .serverlist{padding-bottom: 12px;}
+       .serverlist p{float: left}
+       .serverlist a{display: inline-block; border: 1px solid #C7C5C5;font-weight:100 !important;height: 27px;line-height: 27px; margin: 0 5px;border-radius: 7px; width: 20%;}
+       .S_M{padding: 7px;}
+       .xuangzhong{background-color:#70D47A ; text-shadow: none; color: white !important; border-color:#70D47A !important;}
+       .tit{text-align:  left;padding-left: 22px;}
+       .btn_s{background-color:#70D47A !important;color: #fff; margin: 10px auto;width: 70%;
+    border-radius: 6px;}
+      .warp_box{float: left; height: 33%;-webkit-overflow-scrolling: touch;}
+      .warp_box ul {overflow:auto; height: 100%;-webkit-overflow-scrolling : touch;}
+      
+      .area ul li {height: 45px;}
+     .arealist ul li {height: 40px;border-bottom: 1px solid #C7C7C7;}
+      .area{width:40%;}
+      .arealist{width: 60% ;background-color: #D8D8D8 !important;}
+     .cc{ background-color: #D8D8D8 !important;}
+     ul li {text-shadow: none;}
+    .nav-main >li{width: 33% !important;}
+</style>
 </head>
 <body>
-	<div id="header">
-   		 <include file="Public/shophead" />
-	</div>
-	<div class="nav" style="display: none;">
-	<!--导航条-->
-	<ul class="nav-main">
-		<li id="li-1">区域<span></span>
-			<div id="box-1" class="hidden-box hidden-loc-index">
-				<ul>
-					<li><a href="">杨浦</a></li>
-					<li><a href="">徐汇</a></li>
-					<li><a href="">虹桥</a></li>
-		            <li><a href="">浦东</a></li>
-		            <li><a href="">普陀</a></li>
-		            <li><a href="">闸北</a></li>
-				</ul>
-			</div>
-		</li>
-		<li id="li-2">分类<span></span>
-			<div id="box-2" class="hidden-box hidden-loc-us">
-				<ul>
-					<li><a href="">美容</a></li>
-					<li><a href="">美发</a></li>
-					<li><a href="">美甲</a></li>
-					<li><a href="">推拿</a></li>
-					<li><a href="">汗蒸</a></li>
-					<li><a href="">养生</a></li>
-				</ul>
-			</div>
-		</li>
-		<li id="li-3">智能排序<span></span>
-			<div id="box-3" class="hidden-box hidden-loc-info">
-				<ul>
-					<li><a href="">默认</a></li>
-					<li><a href="">最热</a></li>
-					<li><a href="">最近</a></li>
-				</ul>
-			</div>
-		</li>
-		<li id="li-4">筛选<span></span>
-			<div id="box-4" class="hidden-box hidden-loc-info box04">
-				<ul>
-					<li><a href="">筛选</a></li>
-					<li><a href="">筛选</a></li>
-					<li><a href="">筛选</a></li>
-					<li><a href="">筛选</a></li>
-					<li><a href="">筛选</a></li>
-				</ul>
-			</div>
-		</li>
-	</ul>
-	<!--隐藏盒子-->
-</div>
-	<div style="width:100%;height:1px;color:#F0F0F0;"></div>
-
-
-
-
-
-	<div id="wrapper">
+    <div id="header">
+         <include file="Public/shopshead" />
+    </div>
+    <div id="wrapper">
     <div id="scroller">
         <div id="pullDown" class="idle">
             <span class="pullDownIcon"></span>
-            <span class="pullDownLabel">Loading.</span>
+            <span class="pullDownLabel">刷新。。。</span>
         </div>
 
-        <div id="thelist">
-
+        <div id="thelist" style='background-color: #E0E0E0'>
         </div>
         <div id="pullUp" class="idle" style='display:none'>
             <span class="pullUpIcon"></span>
@@ -95,46 +99,16 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    $(document).ready(function(){
-        wx.config({
-            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-            appId: 'wx1c7041549642a8d9', // 必填，公众号的唯一标识
-            timestamp: '{$timestamp}', // 必填，生成签名的时间戳
-            nonceStr: '{$noncestr}', // 必填，生成签名的随机串
-            signature: '{$signature}',// 必填，签名，见附录1
-            jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-        });
-
-        wx.ready(function(){
-            var latitude = '';
-            var longitude = '';
-            wx.getLocation({
-                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
-                success: function (res) {
-                    latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
-                    longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
-                    
-                    var speed = res.speed; // 速度，以米/每秒计
-                    var accuracy = res.accuracy; // 位置精度
-                    loaded(latitude, longitude);
-                }
-            });
-        });
-    });
-
-</script>
+</body>
 <script>
     var OFFSET = 5;
     var page = 1;
     var PAGESIZE = 10;
 
     var myScroll,
-            pullDownEl, pullDownOffset,
-            pullUpEl, pullUpOffset,
-            generatedCount = 0;
+        pullDownEl, pullDownOffset,
+        pullUpEl, pullUpOffset,
+        generatedCount = 0;
     var maxScrollY = 0;
 
     var hasMoreData = false;
@@ -142,9 +116,16 @@
     document.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }, false);
+    
    
-
-    function loaded(lat,lon) {
+    function loaded(lat,lon,or,pr,er,type,s,q,id) {
+        order = arguments[2] ? arguments[2] : 0;     // 排序id
+        price = arguments[3] ? arguments[3] : 0;     // 价格
+        erv_time = arguments[4] ? arguments[4] : 0; // 服务时间
+        typelist = arguments[5] ? arguments[5] : 0; // 服务时间
+        shi = arguments[6] ? arguments[6] : 0; // 市
+        qu = arguments[7] ? arguments[7] : 0; // 区
+        rid = arguments[8] ? arguments[8] : 0; // 商圈
 
         pullDownEl = document.getElementById('pullDown');
         pullDownOffset = pullDownEl.offsetHeight;
@@ -152,17 +133,19 @@
         pullUpOffset = pullUpEl.offsetHeight;
 
         hasMoreData = false;
-        // $("#thelist").hide();
+
         $("#pullUp").hide();
 
         pullDownEl.className = 'loading';
         pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
 
         page = 1;
-        
-        $.post("{:U('ZhCard/datalist')}", { "page": page,"pagesize": PAGESIZE,'wd':lat,'jd': lon,'type':'fw' },function(response,status) {
-              
+       
+        $.get("{:U('Shops/datalist')}", { "page": page,"pagesize": PAGESIZE,'wd':lat,'jd': lon,'type':'tc','order':order,'price':price,'time':erv_time,'bind_type':typelist,'shi':shi,'qu':qu,'rid':rid},function(response,status) {
+               
                     var rep = eval("(" + response + ")");
+                    
+                   
                     if(rep.total == 0 ){
                         alert('暂无数据');
                         return false;
@@ -172,6 +155,7 @@
                         return false;
                     }
                     
+
                     if (status == "success") {
                         $("#thelist").show();
 
@@ -184,7 +168,9 @@
                         }
 
                         // document.getElementById('wrapper').style.left = '0';
-
+                        if(myScroll != null){
+                                myScroll.destroy();
+                        }
                         myScroll = new iScroll('wrapper', {
                             useTransition: true,
                             topOffset: pullDownOffset,
@@ -206,7 +192,7 @@
                                     this.minScrollY = 0;
                                 } else if (this.y < OFFSET && pullDownEl.className.match('flip')) {
                                     pullDownEl.className = 'idle';
-                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                    pullDownEl.querySelector('.pullDownLabel').innerHTML = 'loading...';
                                     this.minScrollY = -pullDownOffset;
                                 }
                                 if (this.y < (maxScrollY - pullUpOffset - OFFSET) && !pullUpEl.className.match('flip')) {
@@ -239,19 +225,20 @@
                                 }
                             }
                         });
-
+                        
                         $("#thelist").empty();
                         $.each(rep.data, function (key, value) {
+                            //alert(value.address)
+                            var dis = parseFloat(value.distance)*0.001;
+                            var distance = dis.toFixed(1);
+                            $("#thelist").append("<div class='shop_list'><a href='{:U('Seller/seller')}?id="+value.shop_id+"'><div class='li_img'><img src="+value.img+"></div><div class='li_msg'><div class='msg_in'><div class='msg_tit'>"+value.company_name+"</div><div class='msg_type'><span class='card'>卡</span><span class='serve'>服务</span><span class='combo'>套餐</span></div><div class='clear'></div></div><div class='level'><span>☆☆☆☆☆</span><span>"+value.district+" "+value.category+"</span></div><div class='add'><div class='distance'>"+distance+"米</div><div><img src='__PUBLIC__/img/add.png' class='icon_add' >"+value.address+"</div></div></div><div class='clear'></div></a></div>");
                             
-                            $("#thelist").append('<div class="index_image"><a href="{:U("servedetail")}?cid=' + value.good_id + '&jd='+lon+'&wd='+lat+'"  rel="external"><div> <div style=""><img src="'+value.goodsImg+'" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">'+value.name+'<div style="margin-top:5px;color:#444444">'+value.short_name+'</div></div><div class="index_price"><span class="price1">￥'+value.favourable+' </span><span class="price2"><s>￥'+value.cost+'</s></span><div class="shoukong">已售'+value.sales+'</div></div></a></div>');
-
                         });
                         // $("#thelist").listview("refresh");
                         myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
                         // pullDownEl.className = 'idle';
                         // pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
                         // this.minScrollY = -pullDownOffset;
-
                         if (hasMoreData) {
                             myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
                         } else {
@@ -264,10 +251,9 @@
     }
 
     function refresh(w,j) {
-
+       
         page = 1;
-        $.post("{:U('ZhCard/datalist')}", {"page": page,"pagesize": PAGESIZE ,'wd':w,'jd':j,'type':'fw'},function (response, status){
-                   
+        $.get("{:U('Shops/datalist')}", {"page": page,"pagesize": PAGESIZE ,'wd':w,'jd':j,'type':'tc','order':order,'price':price,'time':erv_time,'bind_type':typelist ,'shi':shi,'qu':qu,'rid':rid},function (response, status){
                     var rep = eval("(" + response + ")");
                     if (status == "success") {
                         $("#thelist").empty();
@@ -283,7 +269,9 @@
                         }
 
                         $.each(rep.data, function (key, value) {
-                           $("#thelist").append('<div class="index_image"><a href="{:U("servedetail")}?cid=' + value.good_id + '&jd='+j+'&wd='+w+'"  rel="external"><div> <div style=""><img src="'+value.goodsImg+'" alt="" class="index_img"></div><div class="index_title2"style="margin-top:10px;font-size:13px;">'+value.name+'<div style="margin-top:5px;color:#444444">'+value.short_name+'</div></div><div class="index_price"><span class="price1">￥'+value.favourable+' </span><span class="price2"><s>￥'+value.cost+'</s></span><div class="shoukong">已售'+value.sales+'</div></div></a></div>');
+                            var dis = parseFloat(value.distance)*0.001;
+                            var distance = dis.toFixed(1);
+                            $("#thelist").append("<div class='shop_list'><a href='{:U('Seller/seller')}?id="+value.shop_id+"'><div class='li_img'><img src="+value.img+"></div><div class='li_msg'><div class='msg_in'><div class='msg_tit'>"+value.company_name+"</div><div class='msg_type'><span class='card'>卡</span><span class='serve'>服务</span><span class='combo'>套餐</span></div><div class='clear'></div></div><div class='level'><span>☆☆☆☆☆</span><span>"+value.district+" "+value.category+"</span></div><div class='add'><div class='distance'>"+distance+"千米</div><div><img src='__PUBLIC__/img/add.png' class='icon_add' >"+value.address+"</div></div></div><div class='clear'></div></a></div>");
                         });
                         // $("#thelist").listview("refresh");
                         myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
@@ -301,7 +289,7 @@
 
     function nextPage(w,j) {
         page++;
-        $.post("{:U('ZhCard/datalist')}", { "page": page,"pagesize": PAGESIZE ,'wd':w,'jd': j,'type':'fw'},function (response, status) {
+        $.get("{:U('Shops/datalist')}", { "page": page,"pagesize": PAGESIZE ,'wd':w,'jd': j,'type':'tc','order':order,'price':price,'time':erv_time,'bind_type':typelist},function (response, status) {
                     var rep = eval("(" + response + ")");
                     if (status == "success") {
                         if (rep.total < PAGESIZE) {
@@ -313,7 +301,10 @@
                         }
 
                         $.each(rep.data, function (key, value) {
-                               $("#thelist").append('<div class="index_image"><a href="{:U("servedetail")}?cid=' + value.good_id + '&jd='+j+'&wd='+w+'"  rel="external"><div> <div style=""><img src="'+value.goodsImg+'" alt="" class="index_img"></div><div class="index_title2"style="margin-top:15px;font-size:12px;">'+value.name+'<div style="margin-top:5px;color:#444444">'+value.short_name+'</div></div><div class="index_price"><span class="price1">￥'+value.favourable+' </span><span class="price2"><s>￥'+value.cost+'</s></span><div class="shoukong">已售'+value.sales+'</div></div></a></div>');
+                          
+                           var dis = parseFloat(value.distance)*0.001;
+                            var distance = dis.toFixed(1);
+                            $("#thelist").append("<div class='shop_list'><a href='{:U('Seller/seller')}?id="+value.shop_id+"'><div class='li_img'><img src="+value.img+"></div><div class='li_msg'><div class='msg_in'><div class='msg_tit'>"+value.company_name+"</div><div class='msg_type'><span class='card'>卡</span><span class='serve'>服务</span><span class='combo'>套餐</span></div><div class='clear'></div></div><div class='level'><span>☆☆☆☆☆</span><span>"+value.district+" "+value.category+"</span></div><div class='add'><div class='distance'>"+distance+"千米</div><div><img src='__PUBLIC__/img/add.png' class='icon_add' >"+value.address+"</div></div></div><div class='clear'></div></a></div>");
                         });
                         // $("#thelist").listview("refresh");
                         myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
@@ -330,5 +321,5 @@
 
 
 </script>
-</body>
+
 </html>

@@ -1,146 +1,272 @@
-   <style>
-    .headnav{
-           height: 50px;margin-bottom: 0px; z-index:999;   padding-top: 5px;
-        }
-        .headlist { width: 70%;margin: 0 auto;text-shadow:none !important;font-size: 15px;color:#fff;height: 40px;}
-
-        .headlist div{width: 31%; float:left;border:1px solid #70D47A;height: 30px;line-height: 30px; color:#70D47A}
-        .head1{border-radius: 7px 0 0 7px;}
-        .head2{border-radius: 0px;}
-        .head3{border-radius: 0 7px 7px 0;}
-        .bg{background-color:#70D47A; color: #fff !important;}
-
-        .hidden-box{display: block; position: absolute; left: 0px;width: 100%;     background-color: rgba(0, 0, 0, 0.42);
-    height: 1000px;}
-        #box-3 div,#box-1 div,#box-2 div,#box-4 div{border-top: 1px solid #EAEAEA;background-color:#fff;}
-      
-        .bg_c{background-color: rgba(111, 111, 111, 0.33) !important; height:437px;}
-        .click{color:red;}
+<div class='headnav'>
+    <div class='headlist'>
+        <div class=''>商家</div>
+        <!-- <div  class='head2 {$tc}'>套餐</div>
+        <div  class='head3 {$zh}'>综合卡</div> -->
+        <span style='clear: both;'></span>
+    </div>
+    <div class="nav">
+        <!--导航条-->
 
 
-       .serverlist{padding-bottom: 12px;}
-       .serverlist p{float: left}
-       .serverlist a{display: inline-block;  border: 1px solid #C7C5C5;font-weight:100 !important;height: 27px;line-height: 27px;margin: 0 5px;border-radius: 7px;   width: 20%;}
-       .S_M{padding: 7px;}
-       .xuangzhong{background-color:#70D47A ; text-shadow: none; color: white !important; border-color:#70D47A !important;}
-       .tit{text-align:  left;;padding-left: 22px;}
-       .btn_s{background-color:#70D47A !important;color: #fff; margin: 10px auto;
-    width: 70%;
-    border-radius: 6px;}
-    
-   </style>
+        <ul class="nav-main">
+            <li id="li-1"><a>区域</a><span></span>
+                <div id="box-1" class="hidden-box hidden-loc-index">
+                    <div class='innbox'>
+                        <div class='warp_box area'>
+                            <ul id='area_warp'>
+                                <li id='area_list' class='cc' name='all'>全部区域</li>
+                            </ul>
+                        </div>
+                        <div class='warp_box arealist'>
+                            <ul id='area_ul'>
+                                <li id='area_in' r-id='0'>全部商区</li>
+                            </ul>
+                        </div>
+                        <div style='clear:both;'></div>
+                    </div>
+                </div>
+            </li>
+            <li id="li-2"><a class='tit'>分类</a><span></span>
+                <div id="box-2" class="hidden-box hidden-loc-us">
+                    <div class='innbox'>
+                        <div class='warp_box area'>
+                            <ul class='box_type'></ul>
+                        </div>
+                        <div class='warp_box arealist'>
+                            <ul id='box_list'></ul>
+                        </div>
+                        <div style='clear:both;'></div>
+                    </div>
+                </div>
+            </li>
+            <li id="li-3"><a>排序</a><span></span>
+                <div id="box-3" class="hidden-box hidden-loc-info">
 
-   <div class='headnav'>
-       <div class='headlist'>
-           <div  class='head1 {$fw}'>商家</div> 
-           <!-- <div  class='head2 {$tc}'>套餐</div>
-           <div  class='head3 {$zh}'>综合卡</div> -->
-          <span  style='clear: both;'></span>
-      </div>
+                  <!--  <div class='px click' id='0'>默认排序</div>
+                    <div class='px' id='1'>销量</div>
+                    <div class='px' id='2'>价格</div>
+                    <div class='px' id='3'>好评</div>
+                    <div class='px' id='4'>发布时间</div>-->
 
-
-  <div class="nav">
-  <!--导航条-->
-  <ul class="nav-main">
-    <li id="li-1">区域<span></span>
-      <div id="box-1" class="hidden-box hidden-loc-index">
-        
-        <div class='innbox'>
-          <div><a href="">杨浦</a></div>
-          <div><a href="">徐汇</a></div>
-          <div><a href="">虹桥</a></div>
-          <div><a href="">浦东</a></div>
-          <div><a href="">普陀</a></div>
-          <div><a href="">闸北</a></div>
-        </div>
-     
-      </div>
-    </li>
-    <li id="li-2">分类<span></span>
-      <div id="box-2" class="hidden-box hidden-loc-us">
-        <div class='innbox'>
-          <div><a href="">美容</a></div>
-          <div><a href="">美发</a></div>
-          <div><a href="">美甲</a></div>
-          <div><a href="">推拿</a></div>
-          <div><a href="">汗蒸</a></div>
-          <div><a href="">养生</a></div>
-      </div>
-      </div>
-    </li>
-    <li id="li-3">排序<span></span>
-      <div id="box-3" class="hidden-box hidden-loc-info">
-       
-          <div class='px click' id='0'>默认排序</div>
-          <div class='px' id='1'>销量</div>
-          <div class='px' id='2'>价格</div>
-          <div class='px' id='3'>好评</div>
-          <div class='px' id='4'>发布时间</div>
-       
-      </div>
-    </li>
-
-    <li id="li-4">筛选<span></span>
-      <div id="box-4" class="hidden-box hidden-loc-info box04">
-       <div class='serverlist innbox'>
-        <div class='tit' style='display:{$hidd}'>服务时长(分)</div>
-        <div class='S_M' style='display:{$hidd}'>
-          <a name='1'>0-30</a>
-          <a name='2'>30-60</a>
-          <a name='3'>60-120</a>
-          <a name='4'>120</a>
-        </div>
-        <div class='tit'>价格(元)</div>
-        <div class='price'>
-          <a name='1'>200以下</a>
-          <a name='2'>200-500</a>
-          <a name='3'>500-1000</a>
-          <a name='4'>1000-1500</a>
-          <a name='5'>1500-2000</a>
-          <a name='6'>2000以上</a>
-        </div>
-        <div class='btn_s'>确认</div>
-      </div>
-      </div>
-    </li>
-  </ul>
-  <!--隐藏盒子-->
-  </div>
-    <input type='hidden' id='order'  value=''/> 
-    <input type='hidden' id='s_time'  value=''/> 
-    <input type='hidden' id='pi_ce'  value=''/> 
+                </div>
+            </li>
+        </ul>
+        <!--隐藏盒子-->
+    </div>
+    <input type='hidden' id='order' value=''/>  <!-- 排序 -->
+    <input type='hidden' id='s_time' value=''/>
+    <input type='hidden' id='pi_ce' value=''/>
+    <input type='hidden' id='typelist' value=''/>
+    <input type='hidden' id='diquid' value=''/> <!-- 地区id -->
 </div>
-   <script>
-    $(function(){
 
-       $('.head1').click(function(){
-        location.href="{:U('ZhCard/serve')}";
-       })
+<script>
+    $(document).ready(function () {
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wxc05bf626f605c34a', // 必填，公众号的唯一标识
+            timestamp: '{$timestamp}', // 必填，生成签名的时间戳
+            nonceStr: '{$noncestr}', // 必填，生成签名的随机串
+            signature: '{$signature}',// 必填，签名，见附录1
+            jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
 
-       $('.head2').click(function(){
-       location.href="{:U('ZhCard/combo')}";
-       })
+        wx.ready(function () {
+            var latitude = '';
+            var longitude = '';
+            wx.getLocation({
+                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (res) {
 
-        $('.head3').click(function(){
-        location.href="{:U('ZhCard/index')}";
-       })
+                    latitude = res.latitude;     // 纬度，浮点数，范围为90 ~ -90
+                    longitude = res.longitude;   // 经度，浮点数，范围为180 ~ -180。
 
+                    var speed = res.speed;       // 速度，以米/每秒计
+                    var accuracy = res.accuracy; // 位置精度
+
+
+                    loaded(latitude, longitude);
+
+                    // 排序
+                    $('#box-3').children('.px').click(function (e) {
+
+                        $(this).addClass("click").siblings().removeClass("click");
+                        var oid = $(this).attr('id');
+                        $('#order').val(oid);
+                        loaded(latitude, longitude, oid);
+                        e.stopPropagation();
+                        $(this).parent(".hidden-box").hide();
+                    })
+                    // 服务时长
+                    $('.btn_s').click(function () {
+                        var priceid = $('#pi_ce').val();
+                        var srevetimeid = $('#s_time').val();
+                        var oid = $('#order').val();
+                        $('#box-4').css('display', 'none');
+                        loaded(latitude, longitude, oid, priceid, srevetimeid);
+                        $(this).parent(".hidden-box").hide();
+                    })
+                    // type  类型  分类下的
+                    $('#box_list').delegate('li', 'click', function () {
+                        $(this).parents('.hidden-box').hide();
+
+                        var priceid = $('#pi_ce').val();
+                        var srevetimeid = $('#s_time').val();
+                        var oid = $('#order').val();
+                        var typelist = $(this).attr('name');
+                        //$('#typelist').val(type);
+                        var tp_name = $(this).html();
+                        $('.tit').html(tp_name);
+                        loaded(latitude, longitude, oid, priceid, srevetimeid, typelist);
+
+                    })
+
+                    //大区域 遍历
+                    $.get("{:U('ZhCard/area')}", {"lat": latitude, "lon": longitude}, function (result) {
+
+
+                        var rep = eval("(" + result + ")");
+                        var area = (rep.data[0].parent_id)
+                        $('#diquid').val(area);    // 把市的id保存
+                        //alert(rep['data']);
+                        $.each(rep.data, function (key, value) {
+                            $("#area_list").after('<li name=' + key + '>' + value.region_name + '</li>')
+                        })
+                    })
+                    //区域链表  地名
+                    $('#area_warp').delegate('li', 'click', function () {
+                        $(this).addClass('cc').siblings().removeClass('cc');
+                        $("#area_ul").empty();
+                        var nameid = $(this).attr('name');
+                        if (nameid == 'all') {
+                            $("#area_ul").append("<li id='area_in' name='0'>全部商区</li>");
+                        } else {
+                            $.post("{:U('ZhCard/area')}", {"lat": latitude, "lon": longitude}, function (result) {
+
+                                var rep = eval("(" + result + ")");
+                                $.each(rep.data[nameid].business_circle, function (key, value) {
+                                    $("#area_ul").append('<li city=' + value.parent_id + ' name=' + value.region_id + '>' + value.region_name + '</li>')
+                                })
+                            })
+                        }
+                    })
+                    // 点击商区  筛选 条件
+                    $('#area_ul').delegate('li', 'click', function () {
+                        $(this).parents('.hidden-box').hide();
+
+                        var region_name = $(this).attr('name'); // 商圈id
+                        var city = $(this).attr('city'); // 区id
+                        var shi = $('#diquid').val();   // 市id
+
+                        /*
+                         var priceid = $('#pi_ce').val();
+                         var srevetimeid = $('#s_time').val();
+                         var oid = $('#order').val();
+                         var typelist =  $(this).attr('name');
+                         */
+                        var priceid = '';
+                        var srevetimeid = '';
+                        var oid = $('#order').val();
+                        var typelist = '';
+
+                        loaded(latitude, longitude, oid, priceid, srevetimeid, typelist, shi, city, region_name);
+
+                    })
+
+
+                }
+            });
+        });
+
+
+        // 分类    动态添加  分类 li   默认为 第一个添加
+        $.post("{:U('ZhCard/classify')}", {}, function (response) {
+            var rep = eval("(" + response + ")");
+            if (rep.error == 1) {
+                alert(rep.errorMsg);
+                return false;
+            }
+            $.each(rep.data, function (key, value) {
+                $(".box_type").append('<li name=' + key + '>' + value.name + '</li>')
+            })
+            $('.box_type').children().first().addClass('cc')
+            $.each(rep.data[0].sub, function (key, value) {
+                $("#box_list").prepend('<li name=' + value.bind_id + '>' + value.name + '</li>')
+            })
+        })
+
+        // 排序   动态添加  分类 li
+        $.get("{:U('ServiceList/listSort')}", {"type": 1}, function (response) {
+            alert(response);
+            var rep = eval("(" + response + ")");
+            if (rep.error == 1) {
+                alert(rep.errorMsg);
+                return false;
+            }
+            $.each(rep.data, function (key, value) {
+
+                if (key == 0) {
+                    $('#box-3').append('<div class=\'px click\' id=\'sort_' + key + '\'>' + value.name + '</div>');
+                } else {
+                    $('#box-3').append('<div class=px id=\'sort_' + key + '\'>' + value.name + '</div>');
+                }
+
+            });
+
+        });
+    });
+</script>
+
+<script>
+
+    // 跳转页面
+    $('.head1').click(function () {
+        location.href = "{:U('ZhCard/serve')}";
     })
-      $('.S_M').children('a').click(function(){
+
+    $('.head2').click(function () {
+        location.href = "{:U('ZhCard/combo')}";
+    })
+
+    $('.head3').click(function () {
+        location.href = "{:U('ZhCard/index')}";
+    })
+
+
+    // 点击分类下面的 类别  获取对应二级分类 
+
+    $('.box_type').delegate('li', 'click', function () {
+        uid = $(this).attr('name');
+        $(this).addClass('cc').siblings().removeClass('cc');
+        $.post("{:U('ZhCard/classify')}", {}, function (response) {
+            var rep = eval("(" + response + ")");
+            $("#box_list").empty();
+            $.each(rep.data[uid].sub, function (key, value) {
+                $("#box_list").append('<li name=' + value.bind_id + '>' + value.name + '</li>')
+            })
+        });
+    })
+
+    //  点击筛选   选中服务类别的值保存
+    $('.S_M').children('a').click(function () {
         var servetime = $(this).attr('name');
         $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
-         
-         $('#s_time').val(servetime);
-         
-      })
-      $('.price').children('a').click(function(e){
+
+        $('#s_time').val(servetime);
+
+    })
+    $('.price').children('a').click(function (e) {
         var price = $(this).attr('name');
         $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
         $('#pi_ce').val(price);
-         e.stopPropagation(); 
-      })
-
-      $('.serverlist').click(function(e){
-        e.stopPropagation(); 
-      })
-   </script>
+        e.stopPropagation();
+    })
+    // 冒泡
+    $('.serverlist').click(function (e) {
+        e.stopPropagation();
+    })
+    $('.warp_box').click(function (e) {
+        e.stopPropagation();
+    })
+</script>

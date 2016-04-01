@@ -13,8 +13,9 @@ class ShopsController extends Controller
         $jsapi = get_jsapi_ticket($access_token);
         //随即字符串http:  
         //localhost/1wechatapp/index.php/Home/ZhCard/index.html
-        $url = "http://weixin2.900sui.com/1wechatapp/Home/Shops/shops.html";
-        
+       // $url = "http://weixin2.900sui.com/1wechatapp/Home/Shops/shops.html";
+        $url  = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        echo  $url;
         $noncestr = getRandChar(16);
         //时间戳
         $timestamp = time();
@@ -37,41 +38,26 @@ class ShopsController extends Controller
         $this->display();
     }
 
-    public function datalist(){   // 数据遍历  ajax 下拉列表
+    public function datalist(){   // 数据遍历  商家列表
         /*
           latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
           longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
         */
-        $type = "service/icard_list";
-        if($_POST['type']=='fw'){        // 服务
-             $type = "service/service_list";
-        } 
-        if($_POST['type']=='tc'){     // taochang
-            $type = "service/sm_list";
-        }
-        $size = $_POST['pagesize'];   // 大小
-
+        $type = "service/business_list";
         $url = BASE_URL."{$type}";
         $ch = new curl();
-        /*price time*/
-        
-        $fil[0]['tag'] = 'price'; 
-        $fil[0]['id'] = $_POST['price']; 
-        $fil[1]['tag'] = 'service_time'; 
-        $fil[1]['id'] = $_POST['time']; 
-        
-        $filter =  json_encode($fil); 
-        $param['filter'] = $filter;
-       
-        $param['price'] = $_POST['price'];       // 页数
         $param['page'] = $_POST['page'];       // 页数
         //$param['size'] = $size;
-        $param['cid'] = 321;
+        $param['cid'] = $_POST['shi'];         // 市
+        $param['did'] = $_POST['qu'];          // 区
+        $param['total']=10;                   // 
         $param['order']= $_POST['order'];      // 排序
-        $param['lng']  = $_POST['wd'];         // 纬度
-        $param['lat']  = $_POST['jd'];         // 经度
-        $param['distance'] = 1000;
+        $param['lng']  = $_POST['jd'];         // 纬度  反的
+        $param['lat']  = $_POST['wd'];         // 经度
+        //$param['bind_id']  = $_POST['bind_type'];         // 服务分类  
+        //$param['distance'] = 100;
         $res = $ch->http($url,$param);
+        //print_r($param);
         echo $res;
     }
 
@@ -98,10 +84,8 @@ class ShopsController extends Controller
         $access_token =get_access_token(APP_ID, APP_SECRET);
         //dump($access_token) ;
         $jsapi = get_jsapi_ticket($access_token);
-        //随即字符串http:  
-        //localhost/1wechatapp/index.php/Home/ZhCard/index.html
-        $url = "http://weixin2.900sui.com/1wechatapp/Home/ZhCard/shops.html";
-        
+        $url  = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        //echo  $url;
         $noncestr = getRandChar(16);
         //时间戳
         $timestamp = time();

@@ -5,7 +5,7 @@
  * Date: 2016/3/4 0004
  * Time: 11:18
  */
-define("BASE_URL","http://jkd2.shutung.com:81/App/v3/");
+define("BASE_URL","http://www.900sui.com/App/v3/");
 define("APP_ID","wx1c7041549642a8d9");
 define("APP_SECRET","56fbf00030edf74af5d44083329db84f");
 
@@ -50,10 +50,9 @@ function get_jsapi_ticket($access_token)
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
     $res = curl_exec($ch);
 
-
     //$res = file_get_contents($token_access_url); //获取文件内容或获取网络请求的内容
     //echo $res;
     $result = json_decode($res, true); //接受一个 JSON 格式的字符串并且把它转换为 PHP 变量
-
     return $result['ticket'];
+
 }

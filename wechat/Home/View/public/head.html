@@ -7,6 +7,12 @@
         background-color: white;
     }
 
+    #wrap {
+        position: relative;
+        z-index: 1;
+        height: 400px;
+    }
+
     .headlist {
         width: 70%;
         margin: 0 auto;
@@ -110,7 +116,7 @@
 
     .warp_box {
         float: left;
-        height: 40%;
+
     }
 
     .area ul li {
@@ -157,87 +163,115 @@
     <div class="nav">
         <!--导航条-->
         <ul class="nav-main">
-            <li id="li-1">区域<span></span>
+            <li id="li-1"><a>区域</a><span></span>
                 <div id="box-1" class="hidden-box hidden-loc-index">
-
                     <div class='innbox'>
-                        <div><a href="">杨浦</a></div>
-                        <div><a href="">徐汇</a></div>
-                        <div><a href="">虹桥</a></div>
-                        <div><a href="">浦东</a></div>
-                        <div><a href="">普陀</a></div>
-                        <div><a href="">闸北</a></div>
-                    </div>
+                        <div class='warp_box area' id="wrap">
 
-                </div>
-            </li>
-            <li id="li-2">分类<span></span>
-                <div id="box-2" class="hidden-box hidden-loc-us">
-                    <div class='innbox'>
-                        <div class='warp_box area'>
-                            <ul>
-                                <li class='cc'>非医疗</li>
-                                <li>医疗</li>
-                                <li class='cc'>健康管理</li>
-                            </ul>
+                                <ul id='area_list'>
+                                    <!-- <li  class='cc' name='all'>全部区域</li>-->
+
+
+
+                                </ul>
+
                         </div>
                         <div class='warp_box arealist'>
-                            <ul>
-                                <li>全部区域</li>
-                                <li>长宁区</li>
-                                <li>长宁区</li>
+                            <ul id='area_ul'>
+                                <li id='area_in' r-id='0'>全部商区</li>
                             </ul>
                         </div>
                         <div style='clear:both;'></div>
                     </div>
                 </div>
             </li>
-            <li id="li-3">排序<span></span>
+            <li id="li-2"><a class='tit'>分类</a><span></span>
+                <div id="box-2" class="hidden-box hidden-loc-us">
+                    <div class='innbox'>
+                        <div class='warp_box area'>
+                            <ul class='box_type'></ul>
+                        </div>
+                        <div class='warp_box arealist' id="classfiy">
+                            <ul id='box_list'></ul>
+                        </div>
+                        <div style='clear:both;'></div>
+                    </div>
+                </div>
+            </li>
+            <li id="li-3"><a>排序</a><span></span>
                 <div id="box-3" class="hidden-box hidden-loc-info">
 
-                    <div class='px click' id='0'>默认排序</div>
-                    <div class='px' id='1'>销量</div>
-                    <div class='px' id='2'>价格</div>
-                    <div class='px' id='3'>好评</div>
-                    <div class='px' id='4'>发布时间</div>
+                    <!-- <div class='px click' id='0'>默认排序</div>
+                     <div class='px' id='1'>销量</div>
+                     <div class='px' id='2'>价格</div>
+                     <div class='px' id='3'>好评</div>
+                     <div class='px' id='4'>发布时间</div>-->
 
                 </div>
             </li>
 
-            <li id="li-4">筛选<span></span>
+            <li id="li-4"><a>筛选</a><span></span>
                 <div id="box-4" class="hidden-box hidden-loc-info box04">
                     <div class='serverlist innbox'>
-                        <div class='tit' style='display:{$hidd}'>服务时长(分)</div>
-                        <div class='S_M' style='display:{$hidd}'>
-                            <a name='1'>0-30</a>
-                            <a name='2'>30-60</a>
-                            <a name='3'>60-120</a>
-                            <a name='4'>120</a>
-                        </div>
-                        <div class='tit'>价格(元)</div>
-                        <div class='price'>
-                            <a name='1'>200以下</a>
-                            <a name='2'>200-500</a>
-                            <a name='3'>500-1000</a>
-                            <a name='4'>1000-1500</a>
-                            <a name='5'>1500-2000</a>
-                            <a name='6'>2000以上</a>
-                        </div>
-                        <div class='btn_s'>确认</div>
+                        <!-- <div class='tit' style='display:{$hidd}'>服务时长(分)</div>
+                         <div class='S_M' style='display:{$hidd}'>
+                             <a name='1'>0-30</a>
+                             <a name='2'>30-60</a>
+                             <a name='3'>60-120</a>
+                             <a name='4'>120</a>
+                         </div>
+                         <div class='tit'>价格(元)</div>
+                         <div class='price'>
+                             <a name='1'>200以下</a>
+                             <a name='2'>200-500</a>
+                             <a name='3'>500-1000</a>
+                             <a name='4'>1000-1500</a>
+                             <a name='5'>1500-2000</a>
+                             <a name='6'>2000以上</a>
+                         </div>
+                         <div class='btn_s'>确认</div>-->
                     </div>
                 </div>
             </li>
         </ul>
         <!--隐藏盒子-->
     </div>
-    <input type='hidden' id='order' value=''/>
-    <input type='hidden' id='s_time' value=''/>
-    <input type='hidden' id='pi_ce' value=''/>
+
 </div>
 <script>
-    $.pjax.defaults.timeout = 5200
-    $(document).pjax('[data-pjax] a, a[data-pjax]', '#wrapper');
+    var filter = {};
+    var filterlist = new Array();
+    var latitude = localStorage.getItem('lat');
+    var longitude = localStorage.getItem('lng');
+    var shi, qu, typelist, rid, oid;
+    /* $("a").click(function (event) {
+     event.preventDefault();
+     });*/
+
+    var ms;
+    function loaded() {
+        ms = new iScroll("wrap");
+    }
+    window.addEventListener("DOMContentLoaded", loaded, false);
+
+    $(document).pjax('a[data-pjax]', '#wrapper');
+    $.pjax.defaults.timeout = 5200;
     $(function () {
+        //setTimeout(function(){ new iScroll(document.getElementById('area_warp')) }, 100);
+
+
+        /* if ($.support.pjax) {
+         $(document).on('click', 'a[data-pjax]', function (event) {
+
+         var container = $('#wrapper');
+         //alert(container.html());
+         $.pjax.click(event, {container: container});
+         })
+         $(document).on('pjax:timeout', function (event) {
+         // Prevent default timeout redirection behavior
+         event.preventDefault();
+         });
+         }*/
         /*  $.post("{:U('ZhCard/classify')}",{},function(response){
          var rep = eval("(" + response + ")");
          alert(rep);
@@ -264,22 +298,231 @@
          // $.pjax({url: url, container: '#wrapper',scrollTo:10,timeout:1000});
          })
          */
+        var service_type = $('#service_type').html();
+        // alert(service_type);
+        //alert(service_type);
+        $.get("{:U('ServiceList/listSort')}", {"type": service_type}, function (response) {
+            //alert(response);
+            var rep = eval("(" + response + ")");
+            if (rep.error == 1) {
+                alert(rep.errorMsg);
+                return false;
+            }
+            $.each(rep.data, function (key, value) {
 
-    })
-    $('.S_M').children('a').click(function () {
-        var servetime = $(this).attr('name');
-        $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
-        $('#s_time').val(servetime);
+                if (key == 0) {
+                    $('#box-3').append('<div class=\'px click\' id=\'sort_' + key + '\'>' + value.name + '</div>');
+                } else {
+                    $('#box-3').append('<div class=px id=\'sort_' + key + '\'>' + value.name + '</div>');
+                }
 
-    })
-    $('.price').children('a').click(function (e) {
-        var price = $(this).attr('name');
-        $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
-        $('#pi_ce').val(price);
+            });
+            // 排序
+            $('#box-3').children('.px').click(function (e) {
+                $(this).addClass("click").siblings().removeClass("click");
+                oid = $(this).attr('id').split("sort_")[1];
+                //alert(oid);
+                // $('#order').val(oid);
+                loaded(latitude, longitude);
+                e.stopPropagation();
+                $(this).parent(".hidden-box").hide();
+            });
+        });
+
+        $.get("{:U('ServiceList/listFilter')}", {"type": service_type}, function (response) {
+            var rep = eval("(" + response + ")");
+            if (rep.error == 1) {
+                alert(rep.errorMsg);
+                return false;
+            }
+            $.each(rep.data, function (key, value) {
+
+                $('.serverlist').append("<div class='tit'>" + value.name + "</div>");
+                var div = $('<div></div>');
+
+                div.addClass(value.id);
+
+                $.each(value.sub, function (k, v) {
+                    div.append(" <a name='" + v.id + "'>" + v.value + "</a>");
+                });
+                div.appendTo($('.serverlist'));
+                $('.' + value.id).children('a').click(function (e) {
+                    var price = $(this).attr('name');
+                    $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
+                    filter[value.id] = price;
+                    e.stopPropagation();
+                })
+            });
+            $('.serverlist').append("<div class='btn_s'>确认</div>");
+
+            $('.btn_s').click(function () {
+                /* var priceid = $('#pi_ce').val();
+                 var srevetimeid = $('#s_time').val();*/
+                oid = $('#order').val();
+                filterlist = new Array();
+                $.each(filter, function (k, v) {
+                    var tmp = {};
+                    tmp['tag'] = k;
+                    tmp['id'] = v;
+                    filterlist.push(tmp);
+                })
+                //alert(oid);
+                $('#box-4').css('display', 'none');
+                loaded(latitude, longitude);
+                $(this).parent(".hidden-box").hide();
+            });
+        });
+
+
+        //大区域 遍历
+        $.get("{:U('ZhCard/area')}", {
+            "lat": localStorage.getItem('lat'),
+            "lon": localStorage.getItem('lng')
+        }, function (result) {
+
+            //console.log(localStorage.getItem('lat'));
+            //console.log(longitude);
+            // console.log(result);
+
+            var rep = eval("(" + result + ")");
+            if (rep.error == 0) {
+                shi = (rep.data[0].parent_id);
+                //console.log(shi);
+                //$('#diquid').val(area);    // 把市的id保存
+                //alert(rep['data']);
+                $.each(rep.data, function (key, value) {
+                    $("#area_list").append('<li name=' + key + '>' + value.region_name + '</li>')
+
+                });
+                new iScroll('wrap');
+                $('#area_list').delegate('li', 'click', function () {
+                    $(this).addClass('cc').siblings().removeClass('cc');
+                    $("#area_ul").empty();
+                    var nameid = $(this).attr('name');
+                    alert(nameid);
+                    if (nameid == 'all') {
+                        $("#area_ul").append("<li id='area_in' name='0'>全部商区</li>");
+                    } else {
+                        $.get("{:U('ZhCard/area')}", {
+                            "lat": localStorage.getItem('lat'),
+                            "lon": localStorage.getItem('lng')
+                        }, function (result) {
+                            console.log(result);
+                            var rep = eval("(" + result + ")");
+                            $.each(rep.data[nameid].business_circle, function (key, value) {
+                                $("#area_ul").append('<li city=' + value.parent_id + ' name=' + value.region_id + '>' + value.region_name + '</li>');
+                            })
+                            $('#area_ul').delegate('li', 'click', function () {
+                                $(this).parents('.hidden-box').hide();
+                                rid = $(this).attr('name'); // 商圈id
+                                qu = $(this).attr('city'); // 区id
+                                //alert(rid);
+                                //shi = $('#diquid').val();   // 市id
+                                /*
+                                 var priceid = $('#pi_ce').val();
+                                 var srevetimeid = $('#s_time').val();
+                                 var oid = $('#order').val();
+                                 var typelist =  $(this).attr('name');
+                                 */
+                                // var priceid = '';
+                                //var srevetimeid = '';
+                                oid = $('#order').val();
+                                // typelist ='';
+                                loaded(latitude, longitude);
+
+                            })
+                        })
+                    }
+                })
+                // new iScroll('area_warp');
+                //is.refresh();
+                //new iScroll()
+            }
+
+        })
+        //区域链表  地名
+
+        // 点击商区  筛选 条件
+
+
+        $.get("{:U('ZhCard/classify')}", {}, function (response) {
+            var rep = eval("(" + response + ")");
+            //alert(rep.data);
+            if (rep.error == 1) {
+                alert(rep.errorMsg);
+                return false;
+            }
+            $.each(rep.data, function (key, value) {
+                $(".box_type").append('<li name=' + key + '>' + value.name + '</li>');
+            });
+            $('.box_type').children().first().addClass('cc');
+            $.each(rep.data[0].sub, function (key, value) {
+                $("#box_list").append('<li name=' + value.bind_id + '>' + value.name + '</li>');
+                is = new iScroll("classfiy");
+            });
+            $('.box_type').delegate('li', 'click', function () {
+                uid = $(this).attr('name');
+                $(this).addClass('cc').siblings().removeClass('cc');
+                $.get("{:U('ZhCard/classify')}", {}, function (response) {
+                    var rep = eval("(" + response + ")");
+                    $("#box_list").empty();
+                    $.each(rep.data[uid].sub, function (key, value) {
+                        $("#box_list").append('<li name=' + value.bind_id + '>' + value.name + '</li>')
+                    })
+                    is.refresh();
+                    $('#box_list').delegate('li', 'click', function () {
+                        $(this).parents('.hidden-box').hide();
+
+                        var priceid = $('#pi_ce').val();
+                        var srevetimeid = $('#s_time').val();
+                        oid = $('#order').val();
+                        typelist = $(this).attr('name');
+                        //$('#typelist').val(type);
+                        var tp_name = $(this).html();
+                        $('.tit').html(tp_name);
+                        loaded(latitude, longitude);
+                    });
+                });
+
+            })
+
+        });
+
+        /* $('.box_type').delegate('li', 'click', function () {
+         uid = $(this).attr('name');
+         $(this).addClass('cc').siblings().removeClass('cc');
+         $.get("{:U('ZhCard/classify')}", {}, function (response) {
+         var rep = eval("(" + response + ")");
+         $("#box_list").empty();
+         $.each(rep.data[uid].sub, function (key, value) {
+         $("#box_list").append('<li name=' + value.bind_id + '>' + value.name + '</li>');
+         });
+
+
+         });
+         });*/
+    });
+
+
+    //  点击筛选   选中服务类别的值保存
+    /* $('.S_M').children('a').click(function () {
+     var servetime = $(this).attr('name');
+     $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
+
+     $('#s_time').val(servetime);
+
+     })*/
+    /*    $('.price').children('a').click(function (e) {
+     var price = $(this).attr('name');
+     $(this).addClass("xuangzhong").siblings().removeClass("xuangzhong");
+     $('#pi_ce').val(price);
+     e.stopPropagation();
+     })*/
+    // 冒泡
+    $('.serverlist').click(function (e) {
         e.stopPropagation();
     })
-
-    $('.serverlist').click(function (e) {
+    $('.warp_box').click(function (e) {
         e.stopPropagation();
     })
 </script>

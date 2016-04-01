@@ -16,17 +16,17 @@
 <div class="servedetail_header">
 
     <div class="header_img">
-        <img src="{$res.img}"/>
+        <img src="{$img|default='http://www.900sui.com/Public/Static/Home/Default/Themes/images/app/zw.png'}"/>
         <span class="header_img_num"></span>
 			<span class="servedetail_title">
-				<div>{$res.card_name}</div>
-				<div>{$res.user_bus.shop_name}</div>
+				<div>{$detail.title}</div>
+				<!--<div>{$res.user_bus.shop_name}</div>-->
 			</span>
     </div>
     <div class="servedetail_fork btc">
-        <span class="lv">￥{$res.real_price}</span>
-        <s>￥{$res.price}</s>
-        <span>已售{$res.sales}</span>
+        <span class="lv">￥{$detail.price}</span>
+        <s>￥{$detail.max_price}</s>
+       <!-- <span>已售{$res.sales}</span>-->
         <a href='http://www.900sui.com/help-download.html'>
 				<span class="serve_cart right">
 					前往app购买
@@ -52,10 +52,10 @@
 
         <div class="shop_info_detail btc">
             <span class="shop_info_title">商户信息</span>
-            <div><b>{$res.user_bus.company_name}</b><span class="right" style='display:none'>8.1km</span></div>
+            <div><b>{$detail.user_bus.shop_name}</b><span class="right" style='display:none'></span></div>
             <div class="shop_info_link left">
                 <div>电话:{$res.user_bus.phone}</div>
-                <div>地址：{$res.user_bus.uaddress}</div>
+                <div>地址：{$res.user_bus.address}</div>
             </div>
             <div class="telright right">
                 <a href="tel:{$res.user_bus.phone}"><img src="__PUBLIC__/img/telright.png"></a>

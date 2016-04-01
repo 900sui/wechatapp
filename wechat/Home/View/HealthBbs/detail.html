@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <title>{$title}</title>
     <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
-
     <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
 
 
@@ -18,7 +17,7 @@
             <img src="{$icon}">
         </div>
         <div class="comment_header_info">
-            <div><span class="comment_louzhu">{$poster}</span><span class="ka">楼主</span></div>
+            <div ><span class="comment_louzhu">{$poster}</span><span class="ka">楼主</span></div>
             <div class="comment_time"><span class="glyphicon glyphicon-time"></span>{$create_time}</div>
         </div>
         <div class="clear"></div>
@@ -27,7 +26,6 @@
 <div class="comment_title">
     {$title}
 </div>
-
 <div class="comment_content">
     <foreach name="list" item="vo">
         <if condition="$vo:image eq ''">
@@ -43,7 +41,6 @@
                 <div class="image_description"><span>{$vo:image_description}</span></div>
             </div>
         </if>
-
     </foreach>
 </div>
 </body>
