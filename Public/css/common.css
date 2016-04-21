@@ -1,15 +1,35 @@
-body{
-    font-family: 微软雅黑;
-    background-color: #eeeeee;
-}
-.row {margin:0}
-.x-titlebar{ background-color:#fff;height: 50px;}
-.x-cards{ background-color:#eeeeee;}
-.x-panel-top{padding-bottom: 1px;}
+body{font-family: 微软雅黑;font-size:15px;}
+.x-titlebar{padding:0.5rem;background-color:#fff;overflow:hidden;}
+.x-titlebar-left{float:left;border-left:4px solid #71d47c;height:2rem;line-height:2rem;}
+.x-titlebar-left span{padding-left:0.5rem;}
 .text-white{ color:#333333;}
-.text-right{float:right;line-height: 50px;overflow: hidden;margin-right: 2em;}
 
-.x-titlebar-left{padding-left: 2em;line-height: 50px;overflow: hidden;}
+.x-titlebar-right{float:right;width:1rem;height:1rem;}
+.x-cards{ background-color:#fff;}
+.x-cards .row{margin:0;}
+.x-menu2 .col{padding:0;overflow:hidden;}
+.x-menu2 .col .img-responsive{ width:100%;}
+
+#container .x-row .col-xs-4{border-top:1px solid #f0f0f0;}
+#container .x-row .col-xs-8{border-top:1px solid #f0f0f0;border-left:1px solid #f0f0f0;}
+#container .x-row .col-xs-8~.col-xs-4{border-left:1px solid #f0f0f0;}
+
+.x-row .col-xs-12{border-top:1px solid #f0f0f0;}
+
+#bus_container .x-row  .col-xs-6{border-top:1px solid #f0f0f0;}
+#bus_container .x-row  .col-xs-6+.col-xs-6{border-left:1px solid #f0f0f0;padding-top:1px;}
+#bus_container .col-xs-4{border-top:1px solid #f0f0f0;}
+#bus_container .col-xs-4+.col-xs-4{border-left:1px solid #f0f0f0;padding-top:1px;}
+
+#goods .x-row  .col-xs-3{border-top:1px solid #f0f0f0;}
+#goods .x-row  .col-xs-3+.col-xs-3{border-left:1px solid #f0f0f0;}
+
+.split{height:10px;background-color:#f0f0f0;}
+
+#insurance .x-row .col-xs-6>.col-xs-6{padding-top:3px;border-top:1px solid #f0f0f0;border-left:1px solid #f0f0f0;}
+
+
+.x-img1{ width:40px; height:28px;}
 
 .x-menu.x-row{ margin-bottom:5px;}
 .x-menu.x-row .col{ padding:0;}
@@ -20,11 +40,6 @@ body{
 .x-menu1 .media, .x-menu1 .media>div{ height:77px; line-height:77px; padding-left:5%;}
 .x-menu1 .media:nth-child(1){ margin-bottom:5px;}
 .x-menu1 .media:nth-child(2){ margin-top:0;}
-
-.x-menu2{ height:100px;padding-bottom: 2px;}
-.x-menu2 .col{ height:99px; padding-right:1px;padding-left: 1px; overflow:hidden;}
-.x-menu2 .col .img-responsive{ width:100%;height:100% }
-
 
 .x-menu3{ height:100px;}
 .x-menu3 .col:nth-child(1),.x-menu3 .col:nth-child(3){ height:95px; padding-top:20px;}

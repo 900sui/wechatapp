@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>{$title}</title>
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body>
+<div class="comment_box">
+    <div class="comment_header">
+        <div class="comment_header_img">
+            <img src="{$icon}">
+        </div>
+        <div class="comment_header_info">
+            <div ><span class="comment_louzhu">{$poster}</span><span class="ka">楼主</span></div>
+            <div class="comment_time"><span class="glyphicon glyphicon-time"></span>{$create_time}</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="comment_title">
+    {$title}
+</div>
+<div class="comment_content">
+    <foreach name="list" item="vo">
+        <if condition="$vo:image eq ''">
+            <div class="content">
+                {$vo->content}
+            </div>
+        </if>
+    </foreach>
+    <foreach name="list" item="vo">
+        <if condition="$vo:content eq ''">
+            <div>
+                <img src="{$vo->image}">
+                <div class="image_description"><span>{$vo:image_description}</span></div>
+            </div>
+        </if>
+    </foreach>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>转让详情</title>
+</head>
+<body>
+<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/css/mycss.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/css/main.css" rel="stylesheet">
+<link href="__PUBLIC__/css/detail.css" rel="stylesheet">
+<div class="servedetail_header">
+    <div class="transfer_header_img">
+        <img src="{$img}"/>
+        <span class="transfer_header_user">
+            <span><img src="{$detail.avatar}" alt=""></span>
+            <span style="color: #fff;font-size: 0.65em;">{$detail.nick}</span>
+        </span>
+    </div> 
+    <div class="transfer_info">
+        <div class="transfer_info_title">{$detail.title}</div>
+        <div class="transfer_info_price">
+            <a href='http://www.900sui.com/help-download.html'>
+                <span class="transfer_gmbtn right" style="background: #6DD481;color: #fff;font-size: 0.75em;">
+                    前往APP购买
+                </span>
+            </a>
+            <span class="lv" style="font-size: 20px">￥{$detail.price}</span>
+            <s style="font-size: 15px;color: #7e7e7e">￥{$detail.balance}</s>
+        </div>
+        <div>
+            <span class="transfer_info_time">
+                <img src="__PUBLIC__/img/clock.png">
+                发布：{$detail.ctime}
+            </span>
+            <span class="transfer_info_time">
+                <img src="__PUBLIC__/img/ren.png">
+                {$detail.pv}人围观
+            </span>
+        </div>
+    </div> 
+</div>
+
+<div class="shop_info" style='margin-top: 10px'>
+    <div class="transfer_dt_header">
+        <img src="__PUBLIC__/img/book.png">
+        <span>详情描述</span>
+    </div>
+    <div class="shop_info_detail btc">
+        <span style="margin-left: 30px">{$detail.desc}</span>
+    </div>
+</div>
+
+<div class="transfer_safetime">
+    <img src="__PUBLIC__/img/tiporg.png">
+    保险有效期为{$detail.insurance_period}月
+</div>
+
+<div class="shop_info" style='margin-top: 10px'>
+    <div class="transfer_dt_header">
+        <img src="__PUBLIC__/img/empbook.png">
+        <span>套餐详情</span>
+    </div>
+    <div class="shop_info_detail btc">
+        <foreach name="detail.sm_detail" item="v">
+            <div style="margin-left: 30px;height: 40px;line-height: 40px">
+                <span>{$v['s_goods_title']}</span>
+                <span class="right lv" style="width: 56px;text-overflow:ellipsis;overflow: hidden;">￥{$v['total_price']}</span>
+                <span class="right">{$v['num']}次</span>
+            </div>
+        </foreach>
+    </div>
+</div>
+
+<div class="shop_info" style='margin-top:10px;margin-bottom: 20px'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>适用商户</span>
+    </div>
+    <!-- <span class="shop_info_title">商户信息</span> -->
+    <div class="shop_info_detail btc">
+        <div class="shop_info_link left" style="margin-left: 20px">
+            <div>{$detail['user_bus']['shop_name']}</div>
+            <div>{$detail['user_bus']['address']}</div>
+            <span><if condition="$detail['user_bus']['phone'] eq null">暂无电话<else />{$detail['user_bus']['phone']}</if></span>
+        </div>
+        <div class="telright right transfer_tel">
+            <a href="tel:{$detail['user_bus']['phone']}"><img src="__PUBLIC__/img/tel.png"></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- <div class="goods_detail_comment" style='margin-top: 4%'>
+    <div class="serve_dt_header">
+        <span style="float: left;width: 25px"><img src="__PUBLIC__/img/home.png"></span>
+        <span>详情介绍</span>
+    </div>
+    <div>
+        {$res.content}
+    </div>
+</div> -->
+</body>
+</html>

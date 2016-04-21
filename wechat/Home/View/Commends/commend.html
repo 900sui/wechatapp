@@ -4,44 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
 
-    <title>商品推荐</title>
+    <title>推荐</title>
     <link href="__PUBLIC__/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="__PUBLIC__/css/common.css" media="screen" rel="stylesheet" type="text/css"/>
     <script src="__PUBLIC__/js/jquery-1.12.1.js" type="text/javascript"></script>
     <script src="__PUBLIC__/js/os.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/bridge.js" type="text/javascript"></script>
     <script>
 
-        function setupWebViewJavascriptBridge(callback) {
-            if (window.WebViewJavascriptBridge) {
-                return callback(WebViewJavascriptBridge);
-            }
-            if (window.WVJBCallbacks) {
-                return window.WVJBCallbacks.push(callback);
-            }
-            window.WVJBCallbacks = [callback];
-            var WVJBIframe = document.createElement('iframe');
-            WVJBIframe.style.display = 'none';
-            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
-            document.documentElement.appendChild(WVJBIframe);
-            setTimeout(function () {
-                document.documentElement.removeChild(WVJBIframe)
-            }, 0)
-        }
 
         $(document).ready(function () {
             /*
-            $('.x-panel-top').delegate(".x-titlebar", "click", function () {
-                alert(123);
-            });
-            */
+             $('.x-panel-top').delegate(".x-titlebar", "click", function () {
+             alert(123);
+             });
+             */
+
+
             if (browser.versions.ios) {
                 setupWebViewJavascriptBridge(function (bridge) {
-                    $('.col').delegate("img", "click", function () {
-                        //alert(this.name.split('_')[0]);
-                        //alert(this.name.split('_')[1]);
+                    $('.x-cards').delegate("img", "click", function () {
                         var commends = {
                             "type": this.name.split('_')[0],
-                            "target_id": this.name.split('_')[1]
+                            "target_id": this.name.split('_')[1],
+                            "url": this.alt
                         };
                         //$.parseJSON(goods);
                         bridge.callHandler('callCommends', commends, function (response) {
@@ -49,17 +35,19 @@
                         });
                     });
                 });
-            } else {
-                alert("android");
-                $('.col').delegate("img", "click", function () {
+            } else if(browser.versions.android) {
+                $('.x-cards').delegate("img", "click", function () {
                     var commends = {
                         "type": this.name.split('_')[0],
-                        "target_id": this.name.split('_')[1]
+                        "target_id": this.name.split('_')[1],
+                        "url": this.alt
                     };
                     //$.parseJSON(goods);
                     var str = JSON.stringify(commends);
                     window.AndroidWebView.callCommends(str);
+
                 });
+
             }
         });
 
@@ -70,55 +58,154 @@
 
 
 <div class="x-panel-top">
-        <div class="x-titlebar">
-            <div class="x-titlebar-left">
-                <span class="h5 text-white">服务推荐</span>
-                <span class="h5 text-right"></span>
-            </div>
-            <div class="x-titlebar-right reverse"></div>
+    <div class="x-titlebar">
+        <div class="x-titlebar-left">
+            <span class="h7 text-white">服务推荐</span>
+            <span class="h5 text-right"></span>
         </div>
-</div>
-<div id="container" class="x-cards">
-    {$u_container}
+        <div class="x-titlebar-right reverse"></div>
+    </div>
 </div>
 
+<div id="container" class="x-cards">
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-4"><img name='{$u_container[0]->type}_{$u_container[0]->target_id}'
+                                       src='{$u_container[0]->pic_path}' alt='{$u_container[0]->url}'
+                                       class="img-responsive" onclick="test();"/></div>
+        <div class="col col-xs-8"><img name='{$u_container[1]->type}_{$u_container[1]->target_id}'
+                                       src='{$u_container[1]->pic_path}' alt='{$u_container[1]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-4"><img name='{$u_container[2]->type}_{$u_container[2]->target_id}'
+                                       src='{$u_container[2]->pic_path}' alt='{$u_container[2]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-4"><img name='{$u_container[3]->type}_{$u_container[3]->target_id}'
+                                       src='{$u_container[3]->pic_path}' alt='{$u_container[3]->url}'
+                                       class="img-responsive"/></div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-12"><img name='{$u_container[4]->type}_{$u_container[4]->target_id}'
+                                        src='{$u_container[4]->pic_path}' alt='{$u_container[4]->url}'
+                                        class="img-responsive"/></div>
+    </div>
+</div>
+
+<div class="split"></div>
 <div class="x-panel-top">
     <div class="x-titlebar">
         <div class="x-titlebar-left">
-            <span class="h5 text-white">商户推荐</span>
+            <span class="h7 text-white">商户推荐</span>
             <span class="h5 text-right"></span>
         </div>
         <div class="x-titlebar-right reverse"></div>
     </div>
 </div>
 <div id="bus_container" class="x-cards">
-    {$bus_container}
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-6"><img name='{$bus_container[0]->type}_{$bus_container[0]->target_id}'
+                                       src='{$bus_container[0]->pic_path}' alt='{$bus_container[0]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-6"><img name='{$bus_container[1]->type}_{$bus_container[1]->target_id}'
+                                       src='{$bus_container[1]->pic_path}' alt='{$bus_container[1]->url}'
+                                       class="img-responsive"/></div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-4"><img name='{$bus_container[2]->type}_{$bus_container[2]->target_id}'
+                                       src='{$bus_container[2]->pic_path}' alt='{$bus_container[2]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-4"><img name='{$bus_container[3]->type}_{$bus_container[3]->target_id}'
+                                       src='{$bus_container[3]->pic_path}' alt='{$bus_container[3]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-4"><img name='{$bus_container[4]->type}_{$bus_container[4]->target_id}'
+                                       src='{$bus_container[4]->pic_path}' alt='{$bus_container[4]->url}'
+                                       class="img-responsive"/></div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-12"><img name='{$bus_container[5]->type}_{$bus_container[5]->target_id}'
+                                        src='{$bus_container[5]->pic_path}' alt='{$bus_container[5]->url}'
+                                        class="img-responsive"/></div>
+    </div>
+
 </div>
 
+<div class="split"><br/></div>
 <div class="x-panel-top">
     <div class="x-titlebar">
         <div class="x-titlebar-left">
-            <span class="h5 text-white">产品推荐</span>
+            <span class="h7 text-white">产品推荐</span>
             <span class="h5 text-right"></span>
         </div>
         <div class="x-titlebar-right reverse"></div>
     </div>
 </div>
 <div id="goods" class="x-cards">
-    {$goods_container}
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-3"><img name='{$goods_container[0]->type}_{$goods_container[0]->target_id}'
+                                       src='{$goods_container[0]->pic_path}' alt='{$goods_container[0]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[1]->type}_{$goods_container[1]->target_id}'
+                                       src='{$goods_container[1]->pic_path}' alt='{$goods_container[1]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[2]->type}_{$goods_container[2]->target_id}'
+                                       src='{$goods_container[2]->pic_path}' alt='{$goods_container[2]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[3]->type}_{$goods_container[3]->target_id}'
+                                       src='{$goods_container[3]->pic_path}' alt='{$goods_container[3]->url}'
+                                       class="img-responsive"/></div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-3"><img name='{$goods_container[4]->type}_{$goods_container[4]->target_id}'
+                                       src='{$goods_container[4]->pic_path}' alt='{$goods_container[4]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[5]->type}_{$goods_container[5]->target_id}'
+                                       src='{$goods_container[5]->pic_path}' alt='{$goods_container[5]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[6]->type}_{$goods_container[6]->target_id}'
+                                       src='{$goods_container[6]->pic_path}' alt='{$goods_container[6]->url}'
+                                       class="img-responsive"/></div>
+        <div class="col col-xs-3"><img name='{$goods_container[7]->type}_{$goods_container[7]->target_id}'
+                                       src='{$goods_container[7]->pic_path}' alt='{$goods_container[7]->url}'
+                                       class="img-responsive"/></div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-12"><img name='{$goods_container[8]->type}_{$goods_container[8]->target_id}'
+                                        src='{$goods_container[8]->pic_path}' alt='{$goods_container[8]->url}'
+                                        class="img-responsive"/></div>
+    </div>
 </div>
-
+<div class="split"><br/></div>
 <div class="x-panel-top">
     <div class="x-titlebar">
         <div class="x-titlebar-left">
-            <span class="h5 text-white">保险推荐</span>
+            <span class="h7 text-title text-white">保险推荐</span>
             <span class="h5 text-right"></span>
         </div>
         <div class="x-titlebar-right reverse"></div>
     </div>
 </div>
-<div  class="x-cards">
-    {$safe_container}
+<div class="x-cards" id="insurance">
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-6">
+            <div class="col col-xs-12"><img name='{$safe_container[0]->type}_{$safe_container[0]->target_id}'
+                                            src='{$safe_container[0]->pic_path}' alt='{$safe_container[0]->url}'
+                                            class="img-responsive"/></div>
+            <div class="col col-xs-12"><img name='{$safe_container[1]->type}_{$safe_container[1]->target_id}'
+                                            src='{$safe_container[1]->pic_path}' alt='{$safe_container[1]->url}'
+                                            class="img-responsive"/></div>
+        </div>
+        <div class="col col-xs-6">
+            <div class="col col-xs-6"><img name='{$safe_container[2]->type}_{$safe_container[2]->target_id}'
+                                           src='{$safe_container[2]->pic_path}' alt='{$safe_container[2]->url}'
+                                           class="img-responsive"/></div>
+            <div class="col col-xs-6"><img name='{$safe_container[3]->type}_{$safe_container[3]->target_id}'
+                                           src='{$safe_container[3]->pic_path}' alt='{$safe_container[3]->url}'
+                                           class="img-responsive"/></div>
+        </div>
+    </div>
+    <div class="row x-row x-menu2">
+        <div class="col col-xs-12"><img name='{$safe_container[4]->type}_{$safe_container[4]->target_id}'
+                                        src='{$safe_container[4]->pic_path}' alt='{$safe_container[4]->url}'
+                                        class="img-responsive"/></div>
+    </div>
 </div>
 
 </body>

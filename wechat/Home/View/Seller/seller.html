@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+	<title>商家详情</title>
+	<script src="__PUBLIC__/js/iscroll/jquery-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <link href="__PUBLIC__/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/goods/mycss.css" rel="stylesheet" type="text/css">
+	<link href="__PUBLIC__/css/goods/main.css" rel="stylesheet" />
+	<style type="text/css">
+	a{text-decoration:none;}
+	body{background-color:#E6E6E6}
+	.detail_link  {height: auto !important;    font-size: 12px;}
+	.detail_link ul {height: auto !important;}
+	.detail_link ul li {height:7% !important;}
+	.icon img{position: relative; top: 10px;}
+	.iconimg img {position: relative; top: 10px; }
+	.top{margin-top:-22px;}
+	.detail_link ul li img { width: 27px; margin-right: 5px; height: 27px;}
+	.js_name{ padding: 10px 0px 35px;}
+	.technician{height:45%;}
+	</style>
 </head>
 <body>
+	<div class='top'></div>
+	<div class="detail_header">
+		<div class="header_img">
+			<img src="{$result['data']['img']}">
+			<!--<span class="header_img_num">40</span>-->
+		</div>
+		<div class="detail_title con_title">
+			<ul>
+				<li>
+					<span class="">{$result['data']['company_name']}</span>
+					<!--<span class="ka">停</span>-->
+				</li>
+				<li>
+					<span class="lv">{$result['data']['score']['star']}</span>
+					<span class="font_7" style="display: none">￥88/人</span>
+				</li>
+				<li>
+					<span class="font_7">{$result['data']['district']}</span>
+					<span class="font_7">{$result['data']['category']}</span>
+				</li>
+				<li>
+					<span class="font_7">环境：<samp>{$result['data']['score']['envir']}</samp></span>
+					<span class="font_7">态度：<samp>{$result['data']['score']['service']}</samp></span>
+					<span class="font_7">价格：<samp>{$result['data']['score']['price']}</samp></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail_link_box">
+		<div class="detail_link">
+			<ul class='icon'>
+				<li btm=""><img src="__PUBLIC__/images/address.png"><span>{$result['data']['uaddress']}</span></li>
+				<li btm=""><img src="__PUBLIC__/images/tel.png">{$result['data']['phone']}</li>
+				<li><img src="__PUBLIC__/images/time.png">营业时间：{$result['data']['business_hours']}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail_link_box">
+		<div class="detail_link">
+			<ul class='icon'>
+				<li btm=""><img src="__PUBLIC__/images/address.png">特别提示：购买本店服务，可免费获得预付卡保险</li>
+				<li><img src="__PUBLIC__/images/time.png">在本店接受服务期间，如遇意外可获得保险</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail_link_box">
+		<div class="detail_link">
+			<ul >
+				<li btm="" class='iconimg'><img src="__PUBLIC__/images/home.png">门店服务</li>
+				<li>
+					<div class="detail_mdfw" fw=""><a href="">服务({$result['data']['service_goods_total']})</a></div>
+					<div class="detail_mdfw" fw=""><a href="">综合卡({$result['data']['integrated_card_total']})</a></div>
+					<div class="detail_mdfw"><a href="">套餐({$result['data']['sm_goods_total']})</a></div>
+					<div class="clear"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
 
+	<div class="detail_link_box technician" >
+		<div class="detail_link">
+			<ul >
+				<li btm="" class='js_name iconimg'><img src="__PUBLIC__/images/home.png">商户技师({$result['staff_count']})</li>
+				<li style="margin-bottom:10px;margin-top:10px;">
+					<foreach name="result['data']['staff_list']" item='va' key="k">
+						<a class="content1-picture"  href="{:U('profile')}?id={$_GET['id']}&staff_id={$va['staff_id']}">
+							<img src="{$va['img']}" class="image" />
+							<div class="text_nr">{$va['name']}</div>
+							<div class="text_nr">{$va['position']}</div>
+						</a>						
+					</foreach>
+					<div class="clear"></div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

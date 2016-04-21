@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <include file="Public/header"/>
+
+</head>
+<body>
+<div id="header">
+    <include file="Public/head"/>
+</div>
+
+<hidden id="service_type">4</hidden>
+<div id="wrapper">
+    <div id="scroller">
+        <div id="pullDown" class="idle">
+            <span class="pullDownIcon"></span>
+            <span class="pullDownLabel">刷新。。。</span>
+        </div>
+
+        <div id="thelist">
+        </div>
+        <div id="pullUp" class="idle" style='display:none'>
+            <span class="pullUpIcon"></span>
+            <span class="pullUpLabel">加载。。。</span>
+        </div>
+    </div>
+    <script>
+        var service_type = $('#service_type').html();
+        $(document).ready(function () {
+            //alert($('#thelist').html());
+
+            if (latitude != null && longitude != null) {
+                loaded(latitude, longitude);
+            }
+
+            /* wx.config({
+             debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+             appId: 'wx1c7041549642a8d9', // 必填，公众号的唯一标识
+             timestamp: '{$timestamp}', // 必填，生成签名的时间戳
+             nonceStr: '{$noncestr}', // 必填，生成签名的随机串
+             signature: '{$signature}',// 必填，签名，见附录1
+             jsApiList: ['getLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+             });
+
+             wx.ready(function () {
+             var latitude = '';
+             var longitude = '';
+             wx.getLocation({
+             type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+             success: function (res) {
+             latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+             longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+
+             var speed = res.speed; // 速度，以米/每秒计
+             var accuracy = res.accuracy; // 位置精度
+             loaded(latitude, longitude);
+             // 排序
+             $('#box-3').children('.px').click(function (e) {
+             $(this).addClass("click").siblings().removeClass("click");
+             var oid = $(this).attr('id');
+             $('#order').val(oid);
+             loaded(latitude, longitude, oid);
+             e.stopPropagation();
+             });
+             // 服务时长
+
+             $('.btn_s').click(function () {
+             var priceid = $('#pi_ce').val();
+             var srevetimeid = $('#s_time').val();
+             var oid = $('#order').val();
+             $('#box-4').css('display', 'none')
+
+             loaded(latitude, longitude, oid, priceid, srevetimeid);
+             });
+
+             }
+             });
+             });*/
+           /* $('#box-3').children('.px').click(function (e) {
+                $(this).addClass("click").siblings().removeClass("click");
+                var oid = $(this).attr('id');
+                $('#order').val(oid);
+                loaded(latitude, longitude, oid);
+                e.stopPropagation();
+            });*/
+            // 服务时长
+
+            $('.btn_s').click(function () {
+                var priceid = $('#pi_ce').val();
+                var srevetimeid = $('#s_time').val();
+                var oid = $('#order').val();
+                $('#box-4').css('display', 'none')
+
+                loaded(latitude, longitude, oid, priceid, srevetimeid);
+            });
+        });
+
+    </script>
+    <script>
+        var OFFSET = 5;
+        var page = 1;
+        var PAGESIZE = 10;
+
+        var myScroll,
+                pullDownEl, pullDownOffset,
+                pullUpEl, pullUpOffset,
+                generatedCount = 0;
+        var maxScrollY = 0;
+
+        var hasMoreData = false;
+
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, false);
+
+        //用pjax监控所有分页链接并定义pjax来实现更新
+        $(document).pjax('#thelist a', '#thelist', {fragment: '#thelist', timeout: 5000});
+
+        function loaded(lat, lon, or, pr, er) {
+            order = arguments[2] ? arguments[2] : 0;     // 排序id
+            price = arguments[3] ? arguments[3] : 0;     // 价格
+            erv_time = arguments[4] ? arguments[4] : 0; // 服务时间
+
+            pullDownEl = document.getElementById('pullDown');
+            pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');
+            pullUpOffset = pullUpEl.offsetHeight;
+
+            hasMoreData = false;
+            // $("#thelist").hide();
+            $("#pullUp").hide();
+
+            pullDownEl.className = 'loading';
+            pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
+
+            page = 1;
+            $("#thelist").empty();
+            $.get("{:U('ZhCard/datalist')}", {
+                'page': page,
+                'pagesize': PAGESIZE,
+                'wd': lat,
+                'jd': lon,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
+            }, function (response, status) {
+                //alert(response);
+                var rep = eval("(" + response + ")");
+                if (rep.total == 0) {
+                    // alert('已显示全部');
+                    return false;
+                }
+                if (rep.error == 1) {
+                    // alert(rep.errorMsg);
+                    return false;
+                }
+
+
+                if (status == "success") {
+                    $("#thelist").show();
+                    if (rep.total < PAGESIZE) {
+                        hasMoreData = false;
+                        $("#pullUp").hide();
+                    } else {
+                        hasMoreData = true;
+                        $("#pullUp").show();
+                    }
+
+                    // document.getElementById('wrapper').style.left = '0';
+                    if (myScroll != null) {
+                        myScroll.destroy();
+                    }
+                    myScroll = new iScroll('wrapper', {
+                        useTransition: true,
+                        topOffset: pullDownOffset,
+                        onRefresh: function () {
+                            if (pullDownEl.className.match('loading')) {
+                                pullDownEl.className = 'idle';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                this.minScrollY = -pullDownOffset;
+                            }
+                            if (pullUpEl.className.match('loading')) {
+                                pullUpEl.className = 'idle';
+                                pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+                            }
+                        },
+                        onScrollMove: function () {
+                            if (this.y > OFFSET && !pullDownEl.className.match('flip')) {
+                                pullDownEl.className = 'flip';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '刷新...';
+                                this.minScrollY = 0;
+                            } else if (this.y < OFFSET && pullDownEl.className.match('flip')) {
+                                pullDownEl.className = 'idle';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                                this.minScrollY = -pullDownOffset;
+                            }
+                            if (this.y < (maxScrollY - pullUpOffset - OFFSET) && !pullUpEl.className.match('flip')) {
+                                if (hasMoreData) {
+                                    this.maxScrollY = this.maxScrollY - pullUpOffset;
+                                    pullUpEl.className = 'flip';
+                                    pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+                                }
+                            } else if (this.y > (maxScrollY - pullUpOffset - OFFSET) && pullUpEl.className.match('flip')) {
+                                if (hasMoreData) {
+                                    this.maxScrollY = maxScrollY;
+                                    pullUpEl.className = 'idle';
+                                    pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+                                }
+                            }
+                        },
+                        onScrollEnd: function () {
+                            if (pullDownEl.className.match('flip')) {
+                                pullDownEl.className = 'loading';
+                                pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                                // pullDownAction(); // Execute custom function (ajax call?)
+                                refresh(lat, lon);
+                            }
+                            if (hasMoreData && pullUpEl.className.match('flip')) {
+                                pullUpEl.className = 'loading';
+                                pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                                // pullUpAction(); // Execute custom function (ajax call?)
+                                nextPage(lat, lon);
+                            }
+                        }
+                    });
+
+                    //$("#thelist").empty(); //data-ajax="false"
+                    $.each(rep.data, function (key, value) {
+                        $("#thelist").append('<div class="con_list" ><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + lon + '&wd=' + lat + '"  rel="external" data-ajax="false" ><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt=""></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+
+                    });
+                    // $("#thelist").listview("refresh");
+                    myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+                    // pullDownEl.className = 'idle';
+                    // pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
+                    // this.minScrollY = -pullDownOffset;
+
+                    if (hasMoreData) {
+                        myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                    } else {
+                        myScroll.maxScrollY = myScroll.maxScrollY;
+                    }
+                    maxScrollY = myScroll.maxScrollY;
+                    //setdatacache();
+                }
+            });
+
+        }
+
+        function refresh(w, j) {
+
+            page = 1;
+            $.get("{:U('ZhCard/datalist')}", {
+                'page': page,
+                'pagesize': PAGESIZE,
+                'wd': lat,
+                'jd': lon,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
+            }, function (response, status) {
+                var rep = eval("(" + response + ")");
+                if (status == "success") {
+                    $("#thelist").empty();
+                    myScroll.refresh();
+                    if (rep.total < PAGESIZE) {
+                        hasMoreData = false;
+                        $("#pullUp").hide();
+                    } else {
+                        hasMoreData = true;
+                        $("#pullUp").show();
+                    }
+
+                    $.each(rep.data, function (key, value) {
+                        $("#thelist").append('<div class="con_list"><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                    });
+                    // $("#thelist").listview("refresh");
+                    myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+
+                    if (hasMoreData) {
+                        myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                    } else {
+                        myScroll.maxScrollY = myScroll.maxScrollY;
+                    }
+                    maxScrollY = myScroll.maxScrollY;
+                }
+                ;
+            });
+        }
+
+        function nextPage(w, j) {
+            page++;
+            $.get("{:U('ZhCard/datalist')}", {
+                'page': page,
+                'pagesize': PAGESIZE,
+                'wd': lat,
+                'jd': lon,
+                'type':service_type,
+                'order': oid,
+                'filter':JSON.stringify(filterlist),
+                'bind_type': typelist,
+                'cid': shi,
+                'qu': qu,
+                'rid': rid
+            }, function (response, status) {
+                var rep = eval("(" + response + ")");
+                if (status == "success") {
+                    if (rep.total < PAGESIZE) {
+                        hasMoreData = false;
+                        $("#pullUp").hide();
+                    } else {
+                        hasMoreData = true;
+                        $("#pullUp").show();
+                    }
+
+                    $.each(rep.data, function (key, value) {
+                        $("#thelist").append('<div class="con_list"><a href="{:U("details")}?cid=' + value.card_id + '&jd=' + j + '&wd=' + w + '"  rel="external" data-ajax="false"><div class="detail"><div class="imgbox"><img src="' + value.goodsImg + '" alt="" ></div><div class="prices"><div>' + value.shop_name + '</div><div>' + value.name + '</div><div><span class="p">￥' + value.favourable + '</span> <span class="sp"><s>￥' + value.cost + '</s></span> </div></div><div class="clear"></div></div><div class="clear"></div></a></div>');
+                    });
+                    // $("#thelist").listview("refresh");
+                    myScroll.refresh(); // Remember to refresh when contents are loaded (ie: on ajax completion)
+                    if (hasMoreData) {
+                        myScroll.maxScrollY = myScroll.maxScrollY + pullUpOffset;
+                    } else {
+                        myScroll.maxScrollY = myScroll.maxScrollY;
+                    }
+                    maxScrollY = myScroll.maxScrollY;
+                }
+                ;
+            });
+        }
+
+
+    </script>
+</div>
+
+<!--    <div id="footer"></div> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.content {
+            height: 100%
+        }
+
+        #wrapper {
+          
+            top:  81px;   /* 73px; */
+          
+        }
+
+        .xian {
+            margin: 5px 0px;
+        }
+
+        .con_list {
+            background-color: #fff;
+            padding: 10px 5px 4px 20px;
+            margin-top: 1px;
+            text-indent: 0em;
+        }
+
+        .li_left {
+            float: left;
+            font-size: 15px;
+        }
+
+        .li_right {
+            float: right;
+            font-size: 12px;
+            color: #848484
+        }
+
+        .pingfeng {
+            padding: 6px 0px 0px 0px;
+        }
+
+        .r {
+            padding-right: 7px;
+        }
+
+        .detail {
+            padding: 10px 0px;
+        }
+
+        .imgbox {
+            width: 32%;
+            float: left;
+        }
+
+        .imgbox img {
+            width: 100%
+        }
+
+        .prices {
+            padding-left: 10px;
+            float: left;
+        }
+
+        .p {
+            font-size: 18px;
+            color: #48902B;
+        }
+
+        .sp {
+            font-size: 12px;
+            color: #848484
+        }
+
+        .more {
+            text-align: center;
+            font-size: 15px;
+            color: #848484;
+            padding: 5px 0px;
+        }
