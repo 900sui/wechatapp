@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/wechat/Home/Controller/WechatUserController.class.php" line="63" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aeb24be-d9a2-4a25-a6c3-2280809e4289" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/img/book.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/img/clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/img/empbook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/img/ren.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/img/sp.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Transfer/transferDetail.html" />
+    <list default="true" id="0aeb24be-d9a2-4a25-a6c3-2280809e4289" name="Default" comment="html5 for app">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/2014/m/back_icon_50x50.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/2014/m/icon_5F25x20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/2014/m/icon_9x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/2014/m/top_icon_31x11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/icon/address.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/icon/home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/icon/ren.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/icon/tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/icon/微信web开发者工具.lnk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/images/timg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/2014/m/style131017.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/m_com.17170031.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/m_uc.17183444.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/mystyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/safe.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/css/shop.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/click_more.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/css3-mediaqueries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/html5shiv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/jquery-1.5.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/jquery.mobile-1.0a4.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/2014/m/tabbedContent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/js/moblie/jquery.mobile-1.4.5.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/CardorderController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/ExperienceController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/OpenpolicyController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/ReserveController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/SaasorderController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/SafeorderController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/Controller/ShoporderController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Cardorder/cardorder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Experience/experience.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Openpolicy/ajaxopen.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Openpolicy/openpolicy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/Reserve/reserve.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/WechatUser/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/WechatUser/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Home/View/WechatUser/register.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/1cb85a3fa26c010ec4c55d93078dc094.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/2870fabfed16879758d11999c65eca3d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/34d93d50b34fd51d48b09815fc1d6a9d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/38ef4307109494fb54d267e95556fc87.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/41f985b798e38eb825c371f2e91d47a0.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/4d077591e4f23bb54599cb3f1633d2a9.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/54e87e9ce6d0251003fe04b664c694fe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/55a8b8a2f6cac89eb6d32748dbb7a177.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/5a7e4d811ca0d5e42af6a6b7d4a3c76c.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/6ad67f2fd2422a20d27f20897b1ad3d4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/71574de4ccb8c69bf1e49dae15ca162a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/80d4f99b326dcba03ce26e4c673aed64.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/8d7e09462799bd4cfc3388dba37a9e96.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/97105a4be388313065d6794677b6b8e8.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/9bb30b9aaa0d3a137305cd446b8ddbe9.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/d3c8395bc2f262a28e8b3501ef26d199.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/dd2eaf7d82b3e611196b5f46a12db3b0.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/dffc5311e928f38f30e29f3617211937.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/e6f0eb56d4e55adec933706fec96b995.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/e8004167f7c60c4a933ebbb7a689880d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Cache/Home/f99131dddb9bab1a7886bebf8eb347f4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_03_17.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_05.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_06.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_07.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_08.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_11.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/Runtime/Logs/16_04_12.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/css/detail.css" afterPath="$PROJECT_DIR$/Public/css/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php" afterPath="$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php" afterPath="$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php" afterPath="$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/View/OneExpen/oneExpenDetail.html" afterPath="$PROJECT_DIR$/wechat/Home/View/OneExpen/oneExpenDetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html" afterPath="$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html" afterPath="$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/main.js" afterPath="$PROJECT_DIR$/Public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/Common/function.php" afterPath="$PROJECT_DIR$/wechat/Home/Common/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/Home/Controller/WechatController.class.php" afterPath="$PROJECT_DIR$/wechat/Home/Controller/WechatController.class.php" />
     </list>
     <ignored path="wechatapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +90,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="C:\wamp\www\wechatapp" />
+    <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -40,107 +98,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OneExpenController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wechat/Home/View/WechatUser/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.392857">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state vertical-scroll-proportion="-7.382353">
+              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/View/HealthBbs/detail.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wechat/Home/View/WechatUser/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.035715">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/css/mycss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.637931">
-              <caret line="271" column="1" selection-start-line="271" selection-start-column="1" selection-end-line="271" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransferController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11353032">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HealthBbsController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.214287">
-              <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sm_service.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.607142">
-              <caret line="23" column="108" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="108" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iCard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75">
-              <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transferDetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/transferDetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="32.0">
-              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/css/detail.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5172415">
-              <caret line="378" column="17" selection-start-line="378" selection-start-column="17" selection-end-line="378" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/Home/Common/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.571428">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.610052">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -163,66 +135,38 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wechat/Common/Util/Exception.class.php" />
-        <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Page.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/WechatUser/loginUser.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/WechatUser/bindUser.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/aindex.html" />
-        <option value="$PROJECT_DIR$/../yixiu/Application/Common/Conf/systemConfig.php" />
-        <option value="$PROJECT_DIR$/wechat/Common/Util/curl.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/Conf/config.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/h5/goods.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/AppCommands/Commands.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/AppCommands/BusCommands.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/BusCommands.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/BusCommands.class.php" />
         <option value="$PROJECT_DIR$/wechat/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/WechatUserController.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/WechatController.class.php" />
-        <option value="$PROJECT_DIR$/Public/js/lazyload.js" />
-        <option value="$USER_HOME$/Desktop/LotteryApp_index.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/serve.html" />
-        <option value="$PROJECT_DIR$/ThinkPHP/Conf/convention.php" />
-        <option value="$PROJECT_DIR$/Public/css/main.css" />
-        <option value="$PROJECT_DIR$/Public/css/iscroll/list.css" />
-        <option value="$PROJECT_DIR$/Public/js/localcache.js" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/combo_detail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Shops/shopsdetail.html" />
-        <option value="$PROJECT_DIR$/cache.mainfest" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/ServiceListController.class.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa0.938/1wechatapp/wechat/Home/Controller/ZhCardController.class.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa0.189/1wechatapp/wechat/Home/View/ZhCard/combo.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/servicedetail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/WxConfigController.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/HealthBbs/healthNews.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/HealthBbs/detail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/goodsdetail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Transfer/transferDetail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/Card_details.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/details.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Transfer/auctionCard.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/index.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/service.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/ZhCard/combo.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/public/header.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/ZhCardController.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Shops/shops.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/public/head.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/public/shopshead.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/OneExpen/oneExpenDetail.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php" />
-        <option value="$PROJECT_DIR$/Public/css/mycss.css" />
-        <option value="$PROJECT_DIR$/wechat/Home/Common/function.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php" />
-        <option value="$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php" />
-        <option value="$PROJECT_DIR$/Public/css/detail.css" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html" />
-        <option value="$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/BusCommandsController.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/ORG/curl.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/curl.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Common/Util/curl.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/index.html" />
+        <option value="$PROJECT_DIR$/Public/js/H5Plugin/bus.js" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Commands/bus.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/CommandsController.class.php" />
+        <option value="$PROJECT_DIR$/Public/css/common.css" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/CommendsController.class.php" />
+        <option value="$PROJECT_DIR$/Public/js/os.js" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Commends/bus.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Commends/commend.html" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Forum/forum.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/PublicController.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/ForumController.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/Controller/SellerController.class.php" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/Index/lp.html" />
+        <option value="$PROJECT_DIR$/wechat/Home/View/WechatUser/index.html" />
       </list>
     </option>
   </component>
@@ -240,10 +184,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-10" />
+    <option name="width" value="1931" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -270,6 +213,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,7 +228,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,7 +238,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,25 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -337,10 +263,6 @@
               <option name="myItemId" value="Home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -348,7 +270,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -363,10 +285,6 @@
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZhCard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -374,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -400,163 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Transfer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Seller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OneExpen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HealthBbs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
+              <option name="myItemId" value="weixindl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -572,168 +334,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechatapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goods" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1wechatapp" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.23972602" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="254" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -756,19 +365,249 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\wechatapp\Public\js\iscroll" />
-      <recent name="C:\wamp\www\wechatapp\Public\css\iscroll" />
       <recent name="C:\wamp\www\wechatapp\wechat\Home\Controller" />
       <recent name="C:\wamp\www\wechatapp\Public" />
       <recent name="C:\wamp\www\wechatapp\Public\js" />
+      <recent name="C:\wamp\www\wechatapp\wechat\Home\Controller\AppCommands" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\wechatapp\Public\img" />
-      <recent name="C:\wamp\www\wechatapp\wechat\Home\View\Transfer" />
-      <recent name="C:\wamp\www\wechatapp\Public\css" />
-      <recent name="C:\wamp\www\wechatapp\Public" />
-      <recent name="C:\wamp\www\wechatapp\wechat\Home\View\Seller" />
+      <recent name="C:\wamp\www\wechatapp\wechat\Home\View\Commends" />
+      <recent name="C:\wamp\www\wechatapp\ThinkPHP\Library\Org\Util" />
+      <recent name="C:\wamp\www\wechatapp\wechat\Home\View\AppCommands" />
+      <recent name="C:\wamp\www\wechatapp\wechat\Home\View" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/wechatapp.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/common.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/bootstrap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/os.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ThinkPHP/Conf/convention.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ThinkPHP/Library/Think/Page.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Html.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ThinkPHP/Tpl/dispatch_jump.tpl</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/ThinkPHP/Tpl/page_trace.tpl</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Common/Util/curl.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Conf/config.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/CommendsController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/IndexController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Commends/commend.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Commends/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Index/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Seller/seller.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/index.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/bootstrap-theme.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/combo.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/deta/bootstrap.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/deta/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/deta/mycss.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/detail.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/goods/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/goods/mycss.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/goods/profile.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/address.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/fdj.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/himg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/home.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/pro.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/tel.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/time.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/tipblue.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/tiporg.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/images/top.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/jquery.mobile-1.3.2.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/iscroll/list.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/moblie/jquery.mobile-1.4.5.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/mycss.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/css/zh.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/address.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/fdj.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/himg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/home.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/pro.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/tel.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/time.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/tipblue.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/images/top.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/address.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/book.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/cart.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/clock.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/empbook.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/fdj.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/himg.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/home.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/plus.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/pro.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/ren.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/right.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/sp.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/tel.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/telright.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/time.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/tipblue.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/tipgreen.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/tiporg.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/img/top.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/bridge.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/iscroll/iscroll.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/iscroll/jquery-1.9.1.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/iscroll/jquery.mobile-1.3.2.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/iscroll/list.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/lazyload.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/localcache.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/moblie/jquery.mobile-1.4.5.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Public/js/pjax.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/cache.mainfest</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Common/Util/token.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Common/function.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/SellerController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/ServiceListController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/ShopsController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/WechatController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/WechatUserController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/WxConfigController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/ZhCardController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/HealthBbs/detail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/HealthBbs/healthNews.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/OneExpen/oneExpenDetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Seller/profile.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Shops/shops.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Shops/shopsdetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Shops/shopshead.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Transfer/auctionCard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/Transfer/transferDetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/WechatUser/loginUser.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/Card_details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/aindex.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/combo.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/combo_detail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/goodsdetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/service.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/ZhCard/servicedetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/public/head.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/public/header.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/View/public/shopshead.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/CommandsController.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/wechat/Home/Controller/curl.class.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
@@ -895,61 +734,7 @@
       <option name="project" value="LOCAL" />
       <updated>1456538783120</updated>
     </task>
-    <task id="LOCAL-00013" summary="html5 for app">
-      <created>1456538819389</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1456538819389</updated>
-    </task>
-    <task id="LOCAL-00014" summary="html5 for app">
-      <created>1456566371100</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1456566371100</updated>
-    </task>
-    <task id="LOCAL-00015" summary="html5 for app">
-      <created>1456732922950</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1456732922950</updated>
-    </task>
-    <task id="LOCAL-00016" summary="html5 for app">
-      <created>1456732942552</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1456732942552</updated>
-    </task>
-    <task id="LOCAL-00017" summary="html5 for app">
-      <created>1456732969822</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1456732969822</updated>
-    </task>
-    <task id="LOCAL-00018" summary="html5 for app">
-      <created>1456733067712</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1456733067712</updated>
-    </task>
-    <task id="LOCAL-00019" summary="html5 for app">
-      <created>1458200626288</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1458200626288</updated>
-    </task>
-    <task id="LOCAL-00020" summary="html5 for app">
-      <created>1458808070300</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1458808070300</updated>
-    </task>
-    <task id="LOCAL-00021" summary="html5 for app">
-      <created>1459494684548</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1459494684548</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -962,28 +747,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-10" y="0" width="1931" height="1083" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="764" y="161" width="391" height="696" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24478889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="764" y="161" width="391" height="696" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24242425" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2564935" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.777659" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3270242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1003,325 +788,300 @@
     <option name="LAST_COMMIT_MESSAGE" value="html5 for app" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/ZhCard/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9285715">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/auctionCard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.642857">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/ZhCard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.178572">
-          <caret line="149" column="26" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/ZhCard/service.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-213.07143">
-          <caret line="323" column="25" selection-start-line="323" selection-start-column="25" selection-end-line="323" selection-end-column="25" />
-          <folding>
-            <marker date="1459404196192" expanded="true" signature="9155:9186" placeholder="..." />
-            <marker date="1459404196192" expanded="true" signature="9218:9246" placeholder="..." />
-            <marker date="1459404196192" expanded="true" signature="12661:12692" placeholder="..." />
-            <marker date="1459404196192" expanded="true" signature="12724:12752" placeholder="..." />
-            <marker date="1459404196192" expanded="true" signature="14777:14808" placeholder="..." />
-            <marker date="1459404196192" expanded="true" signature="14840:14868" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ServiceListController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.142858">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/public/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.464286">
-          <caret line="49" column="90" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/ZhCard/combo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="29.178572">
-          <caret line="191" column="44" selection-start-line="191" selection-start-column="44" selection-end-line="191" selection-end-column="44" />
-          <folding>
-            <marker date="1459407056938" expanded="true" signature="10019:10050" placeholder="..." />
-            <marker date="1459407056938" expanded="true" signature="10082:10110" placeholder="..." />
-            <marker date="1459407056938" expanded="true" signature="12317:12348" placeholder="..." />
-            <marker date="1459407056938" expanded="true" signature="12380:12408" placeholder="..." />
-            <marker date="1459407056938" expanded="true" signature="14328:14359" placeholder="..." />
-            <marker date="1459407056938" expanded="true" signature="14391:14419" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Seller/profile.html">
+    <entry file="file://$PROJECT_DIR$/Public/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/goods/main.css">
+    <entry file="file://$PROJECT_DIR$/Public/js/jquery-1.12.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ShopsController.class.php">
+    <entry file="file://$PROJECT_DIR$/Public/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ZhCardController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.5">
-          <caret line="301" column="28" selection-start-line="301" selection-start-column="28" selection-end-line="301" selection-end-column="28" />
-          <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Shops/shops.html">
+    <entry file="file://$PROJECT_DIR$/Public/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="287" column="5" selection-start-line="287" selection-start-column="5" selection-end-line="287" selection-end-column="5" />
-          <folding />
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/public/head.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73747844">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/H5Plugin/bus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24876441">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/比例分布图/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.928572">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/html5-svg-circle-chart/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.107143">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/html5-svg-circle-chart/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="471" column="33" selection-start-line="471" selection-start-column="33" selection-end-line="471" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#8078#9090#0" expanded="false" />
-            <element signature="e#9186#10838#0" expanded="false" />
-            <element signature="e#10897#11003#0" expanded="false" />
-            <element signature="e#11697#13793#0" expanded="false" />
-          </folding>
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Documents/Tencent Files/100776613/FileRecv/微信附近商家/shopshead.html">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-67.17857">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.10845987">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/public/shopshead.html">
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
-          <folding />
+        <state vertical-scroll-proportion="0.20495495">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/IndexController.class.php">
+    <entry file="file://$PROJECT_DIR$/wechat/Common/Util/token.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-11.764706">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/ZhCard/goodsdetail.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Common/Util/curl.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="115" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-11.411765">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/address.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/fdj.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/himg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/home.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/pro.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/tel.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/time.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/tipblue.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/images/top.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/OneExpen/oneExpenDetail.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/WechatUser/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.535715">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-8.984375">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/HealthBbs/detail.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Common/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.035715">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/transferDetail.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.0">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/chanyouji/chanyou/Admin/View/Travel/Travel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28153154">
+          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/CardorderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/safe.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.911764">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/2014/m/style131017.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44638693">
+          <caret line="369" column="16" selection-start-line="369" selection-start-column="16" selection-end-line="369" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/shop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34965035">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ReserveController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.441176">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/SafeorderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.617647">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ShoporderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8029279">
+          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wechat/Home/Common/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19707207">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/OpenpolicyController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5495495">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/SaasorderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6903153">
+          <caret line="74" column="52" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Openpolicy/ajaxopen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6475225">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/WechatController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/linux.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22522523">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/WechatUserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.764706">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Reserve/reserve.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9009009">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/121010334/cgnl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14076577">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/ExperienceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5349099">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/OneExpenController.class.php">
+    <entry file="file://$PROJECT_DIR$/../wechat1/wechat/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state vertical-scroll-proportion="-13.588235">
+          <caret line="95" column="70" selection-start-line="95" selection-start-column="70" selection-end-line="95" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/HealthBbsController.class.php">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Openpolicy/openpolicy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.214287">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        <state vertical-scroll-proportion="-30.088236">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/mycss.css">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Experience/experience.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.637931">
-          <caret line="271" column="1" selection-start-line="271" selection-start-column="1" selection-end-line="271" selection-end-column="1" />
+        <state vertical-scroll-proportion="5.882353">
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/detail.css">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Cardorder/cardorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5172415">
-          <caret line="378" column="17" selection-start-line="378" selection-start-column="17" selection-end-line="378" selection-end-column="17" />
+        <state vertical-scroll-proportion="13.235294">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/sm_service.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/WechatUser/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.607142">
-          <caret line="23" column="108" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-7.382353">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/View/Transfer/iCard.html">
+    <entry file="file://$PROJECT_DIR$/wechat/Home/View/WechatUser/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
-          <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/Home/Controller/TransferController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11353032">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.610052">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
           <folding />
         </state>
       </provider>

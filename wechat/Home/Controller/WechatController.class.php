@@ -14,10 +14,8 @@ use Think\Controller;
 
 class WechatController extends Controller
 {
-
     public function getWechatUser()
     {
-
         $code = I('get.code');
         $uri = I('get.state');
         //dump($code);
@@ -26,17 +24,15 @@ class WechatController extends Controller
         $param['secret'] = APP_SECRET;
         $param['code'] = $code;
         $param['grant_type'] = "authorization_code";
-
         $ch = new curl();
         $res = $ch->http($api_url, $param);
         $result = json_decode($res);
-        dump($result->openid);
+        //dump($result->openid);
         $this->openid = $result->openid;
-        dump($this->openid);
+        //dump($this->openid);
         $_SESSION['openid'] =  $result->openid;
         $_SESSION['access_token'] =  $result->access_token;
-        $this->redirect('WechatUser/'.$uri, '', 3, '');
-
+        $this->redirect('WechatUser/isbind', '', 3, '');
     }
 
 }

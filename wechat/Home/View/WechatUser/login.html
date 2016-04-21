@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>APP绑定微信号</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/m_com.17170031.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/m_uc.17183444.css"/>
+</head>
+<body>
+
+<header class="header">
+	<h1 class="ui_tac">APP</h1>
+	<a class="icon_home z" href="/"></a>
+</header>
+<form enctype="multipart/form-data" action="{:U('WechatUser/bindUser')}" method="post">
+	<div class="ui_rel ui_bt_d3 ui_mt30">
+		<i class="icon_user"></i>
+		<input class="ui_input u_f" id="username" type="text" name="mobile" placeholder="手机号">
+	</div>
+	<div class="ui_rel ui_bt_d3 ui_bb_d3">
+		<i class="icon_pw"></i>
+		<input class="ui_input u_f" id="password" type="password" name="password" placeholder="密码">
+	</div>
+	<div class="ui_tac ui_clr_666 ui_mb10 ui_mt50"></div>
+	<div class="ui_pl15 ui_pr15 ui_mb10">
+		<input class="ui_btn btn_blue" id="btnLogin" type="submit" value="绑定">
+	</div>
+</form>
+<div class="ui_tar ui_pr15">
+	<a href="{:U('WechatUser/register')}" id="btnRegister">立即注册 &gt;</a>
+</div>
+
+</body>
+</html>

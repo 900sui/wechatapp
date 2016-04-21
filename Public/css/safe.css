@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.safedetail{
+    background-color: #ffffff;
+}
+.safe_div1{
+    background-color: #EEEEEE;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 3%;
+}
+.safe_div{
+    padding-top: 1%;
+    padding-left: 2%;
+}
+.safe_div2{
+    border-top: 1px solid #EEEEEE;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 3%;
+}
+.safe_div span{
+    float: left;
+    text-align: left;
+}
+.left_safe{
+    float: left;
+}
+.right_safe{
+    text-align: right;
+    padding-right: 3%;
+}

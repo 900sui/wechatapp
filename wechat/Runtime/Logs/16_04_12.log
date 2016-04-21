@@ -1,0 +1,27 @@
+[ 2016-04-12T11:25:33+08:00 ] 127.0.0.1 /weixindl/Home/WechatUser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001206s ]
+NOTIC: [8] Undefined index: openid D:\wamp\www\weixindl\wechat\Home\Controller\WechatUserController.class.php 第 24 行.
+
+[ 2016-04-12T11:34:19+08:00 ] 127.0.0.1 /weixindl/Home/WechatUser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] Undefined index: openid D:\wamp\www\weixindl\wechat\Home\Controller\WechatUserController.class.php 第 24 行.
+
+[ 2016-04-12T11:47:26+08:00 ] 127.0.0.1 /weixindl/Home/WechatUser/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [8] Undefined index: openid D:\wamp\www\weixindl\wechat\Home\Controller\WechatUserController.class.php 第 24 行.
+

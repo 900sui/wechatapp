@@ -1,0 +1,225 @@
+@charset"utf-8";
+.u_l .num {
+    font-size:12px;
+    width:20px;
+    height:20px;
+    background:#EA3F17;
+    color:#fff;
+    -webkit-border-radius:50%;
+    margin-right:5px
+}
+.user_info {
+    height:160px;
+    color:#fff;
+    background:#50BECC url(http://static.iuniimg.com/img/mobile/user_info.png?t=20150306) 0 50% no-repeat;
+    background-size:100% 100%
+}
+.user_info .btn_tran {
+    color:#fff
+}
+.btn_phone {
+    border:1px solid #DCDCDC;
+    color:#666;
+    background:0 0;
+    height:44px
+}
+.btn_phone .icon_phone {
+    margin-right:10px;
+    width:22px;
+    height:22px;
+    background-position:-72px -60px
+}
+.user_img {
+    width:85px;
+    height:85px;
+    border:2px solid #8DE5CC;
+    display:inline-block;
+    border-radius:50%;
+    overflow:hidden
+}
+.icon_ac_1 {
+    width:21px;
+    height:21px;
+    background-position:2px -82px;
+    margin-right:10px
+}
+.icon_ac_2 {
+    width:21px;
+    height:21px;
+    background-position:-21px -82px;
+    margin-right:10px
+}
+.icon_ac_3 {
+    width:21px;
+    height:21px;
+    background-position:-42px -82px;
+    margin-right:10px
+}
+.icon_ac_4 {
+    width:21px;
+    height:21px;
+    background-position:-63px -82px;
+    margin-right:10px
+}
+.icon_ac_5 {
+    width:27px;
+    height:21px;
+    background-position:-63px -104px;
+    margin-right:4px
+}
+.address_ul {
+    margin-bottom:-10px
+}
+.address_li.cur {
+    background:#5DBDCB;
+    color:#fff
+}
+.address_li.li_arrow_r:after {
+    border-top:2px solid #FFF;
+    border-right:2px solid #FFF
+}
+.ship {
+    overflow:hidden;
+    padding-left:10px;
+    margin-top:30px;
+    margin-bottom:-15px
+}
+.ship li {
+    position:relative;
+    padding-bottom:20px;
+    top:-4px;
+    color:#999
+}
+.ship li:nth-child(1) {
+    color:#4BBDCB
+}
+.ship li:before {
+    content:"\20";
+    width:7px;
+    height:7px;
+    background:#4BBDCB;
+    position:absolute;
+    top:6px;
+    left:-44px;
+    border-radius:50%
+}
+.ship li:nth-child(1):before {
+    background:#4BBDCB;
+    width:9px;
+    height:9px;
+    border:2px solid #87EACF;
+    left:-47px;
+    top:5px
+}
+.ship ul {
+    padding-left:40px;
+    border-left:1px solid #D6D6D6
+}
+.icon_locus {
+    width:20px;
+    height:20px;
+    background-position:0 -103px
+}
+.order_null {
+    top:50px
+}
+.icon_order_null {
+    display:block;
+    margin-bottom:10px
+}
+.gift_img {
+    position:relative
+}
+.gift_img:after {
+    content:"赠品";
+    position:absolute;
+    width:100%;
+    height:18px;
+    line-height:18px;
+    background:#5DBDCB;
+    color:#fff;
+    text-align:center;
+    bottom:0;
+    left:0
+}
+.coupon {
+    overflow:hidden;
+    margin-bottom:15px
+}
+.coupon img {
+    display:block
+}
+.coupon_price {
+    min-width:40%;
+    padding:15px 0 15px 15px;
+    height:98%;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box
+}
+.coupon_price div:nth-child(1) {
+    font-size:20px
+}
+.coupon_txt {
+    width:100%;
+    color:#fff;
+    top:0;
+    left:0;
+    height:98%
+}
+.coupon_des {
+    height:100%;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:10px 15px 10px 13px
+}
+.coupon_des .ui_bd {
+    height:100%;
+    line-height:18px;
+    position:relative;
+    padding:2px 0 0 8px;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size:12px
+}
+.coupon_des .ui_bd p:nth-child(1) {
+    font-size:14px
+}
+.coupon_id {
+    position:absolute;
+    text-align:right;
+    bottom:2px;
+    width:100%;
+    right:5px
+}
+.coupon_id, .coupon_price_des {
+    color:#02A37F
+}
+.coupon_invalid .coupon_id, .coupon_invalid .coupon_price_des {
+    color:#7F7F7F
+}
+.coupon_null {
+    top:90px
+}
+.i_add {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:1px solid #5DBDCB;
+    background:#fff;
+    margin-right:5px
+}
+.i_add:before {
+    content:"+";
+    font-size:22px;
+    color:#5DBDCB;
+    line-height:22px
+}
+.fanli_account {
+    background:#F76362
+}
+.fanli_account .clr1 {
+    color:#FABBBA
+}
+.fanli_account .clr2 {
+    color:#6F0C0A
+}
